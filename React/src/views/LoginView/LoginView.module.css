@@ -1,0 +1,128 @@
+.viewLogin {
+  max-width: 64rem;
+  margin: 6rem auto;
+  padding: 4rem;
+  background-color: #ffffff;
+  border-radius: 1.6rem;
+  box-shadow: 0 1.6rem 4rem rgba(0, 0, 0, 0.1);
+  font-family: "Public Sans", "Open Sans", sans-serif;
+}
+
+.viewLogin h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: rgb(0, 60, 114);
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.viewLogin form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.formControl {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.formControl label {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: rgb(40, 40, 40);
+}
+
+.formControl input {
+  padding: 1.4rem 1.6rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 1rem;
+  font-size: 1.8rem;
+}
+
+.formControl input:focus {
+  outline: none;
+  border-color: #3091e2;
+  box-shadow: 0 0 0 0.3rem rgba(48, 145, 226, 0.2);
+}
+
+.btnPrimary {
+  background-color: rgb(0, 60, 114);
+  color: white;
+  border: none;
+  border-radius: 2.4rem;
+  padding: 1.4rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btnPrimary:hover {
+  background-color: #0059b3;
+}
+
+.formButton {
+  margin-top: 1rem;
+}
+
+.registerLink {
+  margin-top: 2.5rem;
+  text-align: center;
+  font-size: 1.7rem;
+  color: rgb(0, 60, 114);
+  text-decoration: underline;
+  text-underline-offset: 0.4em;
+}
+
+.registerLink:hover {
+  color: #022e56;
+}
+
+/* =========================
+   Responsive
+   ========================= */
+
+/* Tablet */
+@media (max-width: 48em) {
+  .viewLogin {
+    width: 48rem;
+    margin: 6rem auto;
+    padding: 3.6rem 3.2rem 3.2rem;
+  }
+
+  .viewLogin h2 {
+    font-size: 2.6rem;
+    line-height: 3.4rem;
+  }
+}
+
+/* Phone */
+@media (max-width: 40em) {
+  .viewLogin {
+    width: 92vw;
+    margin: 3.2rem auto;
+    padding: 3rem 2.4rem 2.6rem;
+  }
+
+  .viewLogin h2 {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    margin-bottom: 2.4rem;
+  }
+
+  .formControl input {
+    font-size: 1.7rem;
+    line-height: 3rem;
+  }
+
+  .btnPrimary {
+    font-size: 1.7rem;
+    line-height: 3rem;
+  }
+
+  .registerLink {
+    font-size: 1.7rem;
+    line-height: 3rem;
+  }
+}

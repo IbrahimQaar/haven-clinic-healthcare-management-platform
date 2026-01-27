@@ -1,0 +1,214 @@
+.mainContainer {
+  padding: 3.8rem 0 0 0;
+  background-color: rgb(220, 239, 245);
+}
+
+.patientHero {
+  max-width: 118rem;
+  margin: 0 auto 3.4rem;
+  padding: 1.75rem 1.25rem 4.5rem;
+  display: grid;
+  grid-template-columns: 1.05fr 1.25fr;
+  align-items: center;
+  gap: 24.4rem;
+}
+
+.patientHeroTitle {
+  font-family: "ABC Arizona Serif", serif;
+  font-weight: 400;
+  font-size: 5.6rem;
+  color: #003c72;
+  margin: 0 0 3.6rem;
+}
+
+.patientHeroSubtitle {
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 4.3rem;
+  color: #003c72;
+  margin: 0;
+}
+
+.patientHeroImage {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 1.8rem;
+}
+
+.breadcrumbSection {
+  margin-bottom: 3.8rem;
+}
+
+.breadcrumbNav {
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.breadcrumbLink {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.breadcrumbCurrent {
+  font-weight: 600;
+}
+
+.breadcrumbSeparator {
+  font-weight: 700;
+}
+
+.middleDescriptions {
+  max-width: 120rem;
+  margin: 0 auto;
+  font-family: "Public Sans", "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  color: rgb(40, 40, 40);
+  display: grid;
+  gap: 1.2rem;
+  margin-bottom: 4.8rem;
+}
+
+.page {
+  background: #ebf8ff;
+  padding: 6rem 2.4rem 10rem;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.resourceTitle {
+  font-family: "ABC Arizona Serif", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 5.2rem;
+  color: rgb(0, 60, 114);
+  margin-bottom: 4.8rem;
+}
+
+.resourcesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 10rem;
+  row-gap: 6.4rem;
+}
+
+.cardTitleLink {
+  display: inline-block;
+  font-family: "ABC Arizona Serif", serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 31px;
+  color: #003c72;
+  margin-bottom: 1.6rem;
+  text-decoration: underline;
+  text-decoration-thickness: 0.8px;
+  text-underline-offset: 0.5rem;
+  text-decoration-color: #05439f59;
+}
+
+.cardTitleLink:hover {
+  text-decoration-color: #ffe607;
+  text-decoration-thickness: 2px;
+}
+
+.cardDescription {
+  font-family: "Public Sans", "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  color: rgb(40, 40, 40);
+  margin: 0;
+  max-width: 58rem;
+}
+
+.cardLink {
+  display: inline-block;
+  margin-top: 1.6rem;
+  font-family: "Public Sans", "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #7fc4f2;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.35rem;
+  text-decoration-color: red !important;
+}
+
+@media (max-width: 900px) {
+  .patientHero {
+    grid-template-columns: 1fr;
+    gap: 2.8rem;
+    background-color: #def3ff;
+  }
+
+  /* .patientHeroImageWrapper { */
+  /* order: 1; */
+  /* width: 100%; */
+  /* margin: 0 auto; */
+  /* } */
+
+  .patientHeroText {
+    order: 2;
+  }
+
+  .patientHeroImage {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 1.8rem;
+    object-fit: cover;
+  }
+
+  .breadcrumbSection {
+    padding: 0 0 0 2rem;
+  }
+
+  .middleDescriptions {
+    padding: 4.8rem 2rem 0rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: rgb(40, 40, 40);
+    line-height: 2.9rem;
+  }
+
+  .page {
+    padding: 4.8rem 2rem 8rem;
+  }
+
+  .patientHeroText {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .patientHeroTitle {
+    font-size: 3.8rem;
+    line-height: 4.9rem;
+    font-size: 400;
+  }
+
+  .resourcesGrid {
+    grid-template-columns: 1fr;
+    row-gap: 4.8rem;
+  }
+
+  .cardTitle {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  .cardDescription {
+    font-size: 1.6rem;
+    line-height: 2.9rem;
+  }
+}

@@ -1,0 +1,279 @@
+.mainContainer {
+  background: #eaf5fb;
+  padding: 8.25rem 0 0;
+}
+
+.aboutUsHero {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 1.75rem 1.25rem 4.5rem;
+  display: grid;
+  grid-template-columns: 1.05fr 1.25fr;
+  align-items: center;
+  gap: 24.4rem;
+}
+
+.aboutUsTitle {
+  font-family: "ABC Arizona Serif", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 5.6rem;
+  color: #003c72;
+  margin: 0 0 3.6rem;
+}
+
+.aboutUsSubtitle {
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 4.3rem;
+  color: #003c72;
+  margin: 0;
+}
+
+.aboutUsImage {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 1.8rem;
+  display: block;
+}
+
+.aboutUsContent {
+  /* max-width: 1200px; */
+  max-width: 1350px;
+  padding: 4rem 9.4rem;
+  display: flex;
+  flex-direction: column;
+  padding-left: 35rem;
+}
+
+.aboutUsParagraph {
+  font-family: "Public Sans", "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  color: rgb(40, 40, 40);
+  margin-bottom: 2.8rem;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+  margin-bottom: 3.8rem;
+}
+
+.breadcrumbLink {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.breadcrumbCurrent {
+  font-weight: 600;
+}
+
+.symbol {
+  font-weight: 700;
+}
+
+.threeCardContainer {
+  display: flex;
+  width: 155rem;
+  padding: 1.2rem 12.4rem;
+  margin-bottom: 6.2rem;
+  padding-left: 35rem;
+}
+
+.cardOne,
+.cardTwo,
+.cardThree {
+  width: 100%;
+  padding: 4rem 3.5rem;
+  height: 35rem;
+  border-radius: 1.8rem;
+}
+
+/* Card 1 */
+.cardOne {
+  background-color: #003c72;
+}
+
+.cardOne .cardTitle,
+.cardOne .cardBodyText {
+  color: #ffffff;
+  width: 31rem;
+}
+
+.cardOne .cardTitle {
+  margin-bottom: 1.4rem;
+}
+.cardBodyText {
+  line-height: 3.2rem;
+}
+
+/* Card 2 */
+.cardTwo {
+  background-color: #c6e0ee;
+}
+
+.cardTwo .cardTitle {
+  color: #003c72;
+  margin-bottom: 1.4rem;
+}
+
+.cardTwo .cardBodyText {
+  color: #1b2a38;
+  line-height: 3.2rem;
+}
+
+/* Card 3 */
+.cardThree {
+  background-color: #ffffff;
+  border: 0.1rem solid #003c72;
+}
+
+.cardThree .cardTitle {
+  color: #003c72;
+  margin-bottom: 1.4rem;
+}
+
+.cardThree .cardBodyText {
+  color: #1b2a38;
+  line-height: 3.2rem;
+}
+
+.valuesList {
+  margin: 0;
+  padding-left: 2.2rem;
+  color: #1b2a38;
+  line-height: 1.7;
+}
+
+.valuesList li {
+  margin-bottom: 2.2rem;
+}
+
+.valuesList li::marker {
+  color: #2d7dd2;
+}
+
+@media (max-width: 900px) {
+  .mainContainer {
+    padding: 1.5rem 0 0;
+  }
+  .aboutUsHero {
+    grid-template-columns: 1fr;
+    gap: 2.8rem;
+    padding: 2.4rem 1rem 3.2rem;
+    background-color: #def3ff;
+  }
+
+  Image first .aboutUsImageWrapper {
+    order: 1;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .aboutUsImage {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 1.8rem;
+    object-fit: cover;
+  }
+
+  /* Text second */
+  .aboutUsText {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Title style */
+  .aboutUsTitle {
+    font-family: "ABC Arizona Serif", serif;
+    font-weight: 400;
+    font-size: 3.8rem;
+    line-height: 4.9rem;
+    color: rgb(0, 60, 114);
+    margin: 0 0 1.2rem 0;
+  }
+
+  /* Subtitle style */
+  .aboutUsSubtitle {
+    font-family: "Public Sans", "Open Sans", sans-serif;
+    font-weight: 500;
+    font-size: 2rem; /* 20px */
+    line-height: 3.6rem; /* 36px */
+    color: rgb(0, 60, 114);
+    margin: 0;
+  }
+
+  .container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 2.4rem;
+  }
+
+  .aboutUsContent {
+    /* max-width: 36rem; */
+    max-width: 45rem;
+    margin: 0 auto;
+    padding: 3rem 0;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .breadcrumbWrapper {
+    width: 100%;
+  }
+
+  .breadcrumb {
+    justify-content: flex-start;
+    margin-bottom: 2.4rem;
+  }
+
+  .breadcrumbLink,
+  .breadcrumbCurrent,
+  .symbol {
+    font-family: "Public Sans", "Open Sans", sans-serif;
+    font-weight: 500;
+    font-size: 1.8rem; /* 18px */
+    line-height: 3.2rem; /* 32px */
+    color: rgb(0, 60, 114);
+  }
+
+  .aboutUsParagraph {
+    width: 100%;
+    font-family: "Public Sans", "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem; /* 16px */
+    line-height: 2.9rem; /* 29px */
+    color: rgb(40, 40, 40);
+    margin: 0 0 2.4rem;
+  }
+
+  /* Cards: stacked + centered like your screenshot */
+  .threeCardContainer {
+    width: 100%;
+    margin: 2.4rem auto 6.2rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    max-width: 36rem;
+  }
+
+  .cardOne,
+  .cardTwo,
+  .cardThree {
+    width: 100%;
+    height: auto;
+    padding: 3.2rem 2.6rem;
+    border-radius: 1.8rem;
+  }
+
+  .valuesList li {
+    margin-bottom: 1.6rem;
+  }
+}

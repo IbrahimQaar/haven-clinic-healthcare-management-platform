@@ -1,0 +1,191 @@
+/* =========================
+   HERO SECTION
+========================= */
+
+.heroSection {
+  width: 100%;
+  padding: 3.2rem 0 8rem;
+  background-image: url("../../assets/2.png");
+  background-size: contain;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-color: #ebf8ff;
+  margin-bottom: 3.8rem;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding-left: 1.6rem;
+  padding-right: 3.2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================
+   HERO GRID
+========================= */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.45fr 1fr;
+  align-items: start;
+  gap: 6.4rem;
+}
+
+/* =========================
+   LEFT SIDE
+========================= */
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  padding-top: 8rem;
+  background-color: #ebf8ff;
+  transform: translateX(-115px);
+  color: #0b1220;
+}
+
+.greenDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  flex-shrink: 0;
+}
+.heroTitle {
+  margin: 0 0 1.9rem;
+  font-family: "ABC Arizona Serif", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 5.6rem;
+  line-height: 7.3rem;
+  color: rgb(0, 60, 114);
+
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+.lineOne,
+.lineTwo {
+  display: block;
+}
+
+.heroTitleHighlight {
+  color: #006770;
+}
+
+/* sub text */
+.heroSubText {
+  margin: 1.6rem 0 0;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  color: #0f172a;
+  max-width: 62rem;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttonRow {
+  margin-top: 3.5rem;
+  display: flex;
+  gap: 1.6rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.04rem;
+
+  padding: 1.6rem 2.6rem;
+  border-radius: 1.4rem;
+  border: none;
+  cursor: pointer;
+
+  font-weight: 800;
+  font-size: 1.6rem;
+  color: #ffffff;
+  background-color: #1388ae;
+}
+
+.secondaryBtn {
+  padding: 1.6rem 2.6rem;
+  border-radius: 1.4rem;
+  cursor: pointer;
+
+  font-weight: 800;
+  font-size: 1.6rem;
+
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.55);
+  color: #0031a4;
+
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.06);
+  text-decoration: none;
+}
+
+.btnIcon {
+  width: 18px;
+  height: 18px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* Tablets & small laptops (≤ 944px)
+   Examples: iPad landscape, small MacBooks, Surface tablets */
+@media (max-width: 944px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 4.8rem;
+    text-align: center;
+  }
+
+  .heroContent {
+    transform: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .buttonRow {
+    justify-content: center;
+  }
+}
+
+/* Large phones & small tablets (≤ 704px)
+   Examples: iPad Mini, large Android phones, iPhone Plus/Max */
+@media (max-width: 704px) {
+  .heroTitle {
+    font-size: 3.4rem;
+  }
+
+  .heroSubText {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+  }
+
+  .heroContent {
+    padding: 2.8rem;
+  }
+}
+
+/* Mobile phones (≤ 544px)
+   Examples: iPhone 12/13/14/15, small Android devices */
+@media (max-width: 544px) {
+  .heroTitle {
+    font-size: 3rem;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+    max-width: 36rem;
+  }
+}

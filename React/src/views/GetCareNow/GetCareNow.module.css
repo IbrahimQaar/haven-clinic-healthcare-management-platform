@@ -1,0 +1,178 @@
+.getCareSection {
+  padding: 5rem 1.25rem;
+  /* background: #f9fbff; */
+  margin-top: 3.4rem;
+}
+
+.sectionKicker {
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 2.9rem;
+  font-weight: 500;
+  color: rgb(0, 60, 114);
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 4rem;
+  line-height: 5.2rem;
+  font-weight: 400;
+  color: rgb(0, 60, 114);
+  margin: 0 0 1rem;
+}
+
+.sectionDescription {
+  max-width: 78rem;
+  margin: 0 auto 2.75rem;
+  text-align: center;
+
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  font-weight: 400;
+
+  color: rgb(40, 40, 40);
+}
+
+.descriptionLink {
+  color: #0b3a6a;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.descriptionLink:hover {
+  opacity: 0.85;
+}
+
+.careCardsGrid {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.careCard {
+  background: #ffffff;
+  border: 2px solid rgba(11, 58, 106, 0.35);
+  border-radius: 18px;
+  padding: 1.8rem 1.6rem 1.7rem;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+  display: flex;
+  flex-direction: column;
+  min-height: 440px;
+}
+
+.careCardHeader {
+  display: flex;
+  gap: 1.05rem;
+  align-items: flex-start;
+  margin-bottom: 1.4rem;
+}
+
+.careIconBox {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: rgba(11, 58, 106, 0.06);
+  border: 1px solid rgba(11, 58, 106, 0.15);
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.careCardTitle {
+  color: rgb(0, 60, 114);
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 3.1rem;
+  text-decoration: none;
+  border-bottom: 1px solid #3535b7;
+}
+
+.careCardTitle:hover {
+  opacity: 0.9;
+}
+
+.careCardSubtitle {
+  display: block;
+  margin-top: 0.25rem;
+  font-weight: 400;
+}
+
+.careList {
+  margin: 0;
+  padding-left: 1.1rem;
+
+  display: grid;
+  gap: 1.05rem;
+
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  font-weight: 400;
+
+  color: rgb(40, 40, 40);
+}
+
+.careList li::marker {
+  color: #1d4ed8;
+}
+
+.careSmallLink {
+  color: #0b3a6a;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.careSmallLink:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 64em) {
+  .sectionKicker {
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    font-weight: 500;
+    color: rgb(0, 60, 114);
+  }
+
+  .sectionTitle {
+    font-size: 2.8rem;
+    line-height: 3.6rem;
+    font-weight: 400;
+    color: rgb(0, 60, 114);
+  }
+
+  .sectionDescription {
+    font-size: 1.6rem;
+    line-height: 2.9rem;
+    font-weight: 400;
+    color: rgb(40, 40, 40);
+  }
+
+  .careCardTitle,
+  .careCardSubtitle {
+    display: inline-block;
+    font-size: 2rem;
+    line-height: 2.6rem;
+    font-weight: 400;
+    color: rgb(0, 60, 114);
+  }
+
+  .careList {
+    font-size: 1.6rem;
+    line-height: 2.9rem;
+    font-weight: 400;
+    color: rgb(40, 40, 40);
+  }
+
+  .careCardsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.15rem;
+  }
+
+  .careCard {
+    min-height: auto;
+  }
+}
