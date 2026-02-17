@@ -6,6 +6,11 @@ Haven Clinic is a full-stack healthcare web application that models patient-faci
 
 ---
 
+## Screenshots
+
+
+---
+
 ## ✨ Key Features
 
 * **Service Discovery**
@@ -62,11 +67,6 @@ Haven Clinic follows a layered full-stack architecture:
 * Clear separation between presentation, service, and data layers
 
 The application is designed for maintainability, modularity, and future scalability.
-
----
-
-## Screenshots
-
 
 ---
 
