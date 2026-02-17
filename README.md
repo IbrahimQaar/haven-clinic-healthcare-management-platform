@@ -11,10 +11,9 @@ Haven Clinic is a full-stack healthcare web application that models patient-faci
 <img width="1511" height="860" alt="Screenshot 2026-02-17 at 1 47 54 AM" src="https://github.com/user-attachments/assets/ab71c587-0095-4631-bcf9-5dcecbaf9c3a" />
 
 <img width="1510" height="861" alt="Screenshot 2026-02-17 at 1 49 46 AM" src="https://github.com/user-attachments/assets/d282cde2-484b-42a0-bac2-bc0fd29104f0" />
-
-<img width="1510" height="860" alt="Screenshot 2026-02-17 at 1 50 02 AM" src="https://github.com/user-attachments/assets/c2ca7768-94c3-4a61-b370-e9785d6f2586" />
-
 <img width="1509" height="857" alt="Screenshot 2026-02-17 at 1 50 16 AM" src="https://github.com/user-attachments/assets/44a53fd1-09ab-4d58-a1d2-e3e9f490ccb8" />
+
+<img width="1507" height="863" alt="Screenshot 2026-02-17 at 2 35 58 AM" src="https://github.com/user-attachments/assets/ef366864-ca78-424b-991b-0ec65b96ab95" />
 
 ---
 
