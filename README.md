@@ -8,7 +8,7 @@ Built with a layered REST architecture, the platform emphasizes accessibility, p
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 <img width="1511" height="857" alt="Screenshot" src="https://github.com/user-attachments/assets/07612e36-bc8b-4600-b6e6-fb59e514d871" />
 
@@ -49,7 +49,7 @@ Built with a layered REST architecture, the platform emphasizes accessibility, p
 
 ---
 
-## 🧭 Application Structure
+##  Application Structure
 
 | Page              | Purpose                                                      |
 | ----------------- | ------------------------------------------------------------ |
@@ -62,7 +62,7 @@ Built with a layered REST architecture, the platform emphasizes accessibility, p
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 | Category | Technology                     | Responsibility                        |
 | -------- | ------------------------------ | ------------------------------------- |
@@ -73,7 +73,7 @@ Built with a layered REST architecture, the platform emphasizes accessibility, p
 
 ---
 
-## 🏗 Architecture
+##  Architecture
 
 Haven Clinic follows a layered full-stack architecture:
 
@@ -86,7 +86,7 @@ The system is designed for maintainability, modularity, and future scalability.
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
