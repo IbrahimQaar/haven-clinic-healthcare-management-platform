@@ -137,7 +137,5 @@ npm start
 ---
 
 ## 👨‍💻 Author
-
-**Ibrahim Qaar**
-Full-Stack Java & React Developer
+**Ibrahim Qaar** Software Engineer
 
