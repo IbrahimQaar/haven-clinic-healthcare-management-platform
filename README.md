@@ -78,36 +78,33 @@ The application is designed for maintainability, modularity, and future scalabil
 
 ## Getting Started
 
-### Prerequisites
-
-* Node.js
-* Java 17
-* PostgreSQL
+Prerequisites
+Make sure the following are installed:
+Node.js
+Java 17
+PostgreSQL
 
 ---
 
-### Frontend
+##  Clone the Repository
+git clone https://github.com/IbrahimQaar/haven-clinic-healthcare-management-platform.git
+cd haven-clinic-healthcare-management-platform
 
-```bash
+---
+
+##  Backend Setup
+Configure your PostgreSQL credentials in:
+backend/src/main/resources/application.properties
+
+##  Start the Spring Boot application:
+cd backend
+./mvnw spring-boot:run
+
+---
+
+##  Frontend Setup
+Open a new terminal window and run:
 cd frontend
 npm install
 npm start
-```
 
----
-
-### Backend
-
-```bash
-cd backend
-./mvnw spring-boot:run
-```
-
-Configure PostgreSQL credentials in `application.properties` before starting the backend.
-
----
-
-## 👨‍💻 Author
-
-**Ibrahim Qaar**
-Full-Stack Java & React Developer
