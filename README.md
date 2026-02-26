@@ -10,7 +10,7 @@ Built with a layered REST architecture, the platform emphasizes accessibility, p
 
 ## Screenshots
 
-<img width="1511" height="857" alt="Screenshot" src="https://github.com/user-attachments/assets/07612e36-bc8b-4600-b6e6-fb59e514d871" />
+<!-- <img width="1511" height="857" alt="Screenshot" src="https://github.com/user-attachments/assets/07612e36-bc8b-4600-b6e6-fb59e514d871" />
 
 <img width="1511" height="860" alt="Screenshot" src="https://github.com/user-attachments/assets/ab71c587-0095-4631-bcf9-5dcecbaf9c3a" />
 
@@ -18,7 +18,16 @@ Built with a layered REST architecture, the platform emphasizes accessibility, p
 
 <img width="1509" height="857" alt="Screenshot" src="https://github.com/user-attachments/assets/44a53fd1-09ab-4d58-a1d2-e3e9f490ccb8" />
 
-<img width="1507" height="863" alt="Screenshot" src="https://github.com/user-attachments/assets/ef366864-ca78-424b-991b-0ec65b96ab95" />
+<img width="1507" height="863" alt="Screenshot" src="https://github.com/user-attachments/assets/ef366864-ca78-424b-991b-0ec65b96ab95" /> -->
+<img width="1507" height="858" alt="Screenshot 2026-02-26 at 2 32 11 AM" src="https://github.com/user-attachments/assets/dd22c890-1b78-4e49-8709-a7d1120e5744" />
+
+<img width="1505" height="860" alt="Screenshot 2026-02-26 at 2 31 55 AM" src="https://github.com/user-attachments/assets/88884bea-7b32-489f-babd-e63732f78e43" />
+<img width="1510" height="862" alt="Screenshot 2026-02-26 at 2 31 35 AM" src="https://github.com/user-attachments/assets/85c2d32e-5691-4bdb-a614-3c5b03694d11" />
+<img width="1507" height="861" alt="Screenshot 2026-02-26 at 2 31 27 AM" src="https://github.com/user-attachments/assets/277f125d-63b2-4d06-8457-adb07db876a7" />
+<img width="1509" height="861" alt="Screenshot 2026-02-26 at 2 31 19 AM" src="https://github.com/user-attachments/assets/c3b4d8ae-ea06-4ff1-a853-b595c874eb95" />
+<img width="1506" height="861" alt="Screenshot 2026-02-26 at 2 31 12 AM" src="https://github.com/user-attachments/assets/a859fab0-77b6-473f-a450-a86401ad109f" />
+<img width="1508" height="857" alt="Screenshot 2026-02-26 at 2 31 02 AM" src="https://github.com/user-attachments/assets/60a10206-23d3-44dc-aa36-e5bb447fa0a5" />
+
 
 ---
 
