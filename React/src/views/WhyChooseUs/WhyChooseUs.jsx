@@ -1,73 +1,84 @@
 import styles from "./WhyChooseUs.module.css";
-import clinicImg from "../../assets/GroupsOfDoctors.png";
 import { HeartPulse, Stethoscope, Handshake, Smile } from "lucide-react";
 import { InsuranceSection } from "../Insurances/InsuranceSection";
+import Testimonials from "../Testimonials/Testimonials";
 
 export default function WhyChooseUs() {
   return (
     <>
       <div className={styles.whyChooseSection}>
+        {/* Title centered above the grid */}
+        <div className={styles.titleWrapper}>
+          <h2 className={styles.title}>What Sets Havenwell Health Apart</h2>
+          <div className={styles.textContainer}>
+            <p className={styles.subtitle}>
+              Havenwell Health brings together experienced physicians and
+              compassionate care teams dedicated to providing trusted medical
+              care close to home.
+            </p>
+          </div>
+        </div>
+
         <div className={styles.container}>
           <div className={styles.textContainer}>
-            <h2 className={styles.title}>Why Patients Trust HavenClinic</h2>
-            <p className={styles.subtitle}>
-              At HavenClinic, trust begins with listening. Every patient is
-              treated with respect, honesty, and personalized attention —
-              because true care goes beyond treatment.
-            </p>
-
             <div className={styles.features}>
               <div className={styles.feature}>
                 <Stethoscope className={styles.icon} />
                 <div>
                   <h3>Care That Listens</h3>
                   <p>
-                    Our doctors take time to understand your story before
-                    suggesting care.
+                    Our physicians take time to understand your concerns and
+                    provide care that reflects your health needs.
                   </p>
                 </div>
               </div>
+
               <div className={styles.feature}>
                 <Handshake className={styles.icon} />
                 <div>
                   <h3>Trusted by Families</h3>
                   <p>
-                    Thousands of patients rely on HavenClinic for clear,
-                    consistent, and compassionate care.
+                    Families across our communities rely on Havenwell Health for
+                    dependable care delivered with respect and compassion.
                   </p>
                 </div>
               </div>
+
               <div className={styles.feature}>
                 <HeartPulse className={styles.icon} />
                 <div>
                   <h3>Advanced Yet Personal</h3>
                   <p>
-                    Modern technology meets the warmth of real human connection
-                    — in every visit.
+                    We combine modern medical technology with a personal
+                    approach that keeps patients at the center of care.
                   </p>
                 </div>
               </div>
+
               <div className={styles.feature}>
                 <Smile className={styles.icon} />
                 <div>
-                  <h3>Your Comfort Matters</h3>
+                  <h3>Care Made Simple</h3>
                   <p>
-                    From online booking to in-person visits, everything feels
-                    simple and reassuring.
+                    Convenient locations and easy scheduling make it easier for
+                    patients to access the care they need.
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* RIGHT SIDE IMAGE*/}
           <div className={styles.imageArea}>
-            <img src={clinicImg} alt="Doctors smiling with patients" />
+            <img
+              src="/images/GroupsOfDoctors.png"
+              alt="Havenwell Health physicians and care team"
+            />
           </div>
         </div>
-
-        <InsuranceSection />
       </div>
+
+      <Testimonials />
+      <InsuranceSection />
     </>
   );
 }

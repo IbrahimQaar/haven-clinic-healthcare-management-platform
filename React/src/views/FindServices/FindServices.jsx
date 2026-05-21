@@ -1,37 +1,15 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import styles from "./FindServices.module.css";
-import { MapPin, Phone, CheckCircle } from "lucide-react";
+import { Phone, CheckCircle, Building, Star } from "lucide-react";
 import { fetchDoctors } from "../../services/doctorsService";
 import Footer from "../Footer/Footer";
 
-// Doctor images
-import SarahBrown from "../../assets/SarahBrown.png";
-import MichaelJohnson from "../../assets/MichaelJohnson.png";
-import emmaSmith from "../../assets/emmaSmith.png";
-import WilliamDavis from "../../assets/WilliamDavis.png";
-import FaozanNarvel from "../../assets/FaozanNarvel.png";
-import Olivia from "../../assets/Olivia.png";
-
-// Map doctor_id → image
-const doctorImages = {
-  1: emmaSmith,
-  2: MichaelJohnson,
-  3: SarahBrown,
-  4: WilliamDavis,
-  5: Olivia,
-  6: FaozanNarvel,
-};
-
-const doctorPhones = {
-  1: "(614) 555-2381",
-  2: "(614) 555-4729",
-  3: "(614) 555-9034",
-  4: "(614) 555-6612",
-  5: "(614) 555-7845",
-  6: "(614) 555-5190",
-};
-
 export default function FindServices() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   const [doctors, setDoctors] = useState([]);
 
   useEffect(() => {
@@ -42,45 +20,114 @@ export default function FindServices() {
 
   return (
     <>
+      <div className={styles.mainContainer}>
+        <div className={styles.heroPattern} aria-hidden="true" />
+
+        <div className={styles.patientHero}>
+          <div className={styles.patientHeroText}>
+            <p className={styles.patientHeroTitle}>Find a Doctor</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Breadcrumb */}
+      <div className={styles.breadcrumbSection}>
+        <div className={styles.breadcrumbNav}>
+          <Link to="/" className={styles.breadcrumbLink}>
+            Home
+          </Link>
+
+          <span className={styles.breadcrumbSeparator}>/</span>
+
+          <span className={styles.breadcrumbLink}>Find a Doctor</span>
+        </div>
+      </div>
+
       <section className={styles.container}>
         {doctors.map((doctor) => (
-          <div className={styles.card} key={doctor.doctor_id}>
+          <div className={styles.card} key={doctor.doctorId}>
             <img
               className={styles.doctorImage}
-              src={doctorImages[doctor.doctor_id]}
+              src={doctor.imageUrl}
               alt={doctor.name}
             />
 
+            {/* Name + Credential */}
             <div className={styles.nameNTitle}>
-              <h2 className={styles.name}>{doctor.name}</h2>
+              <h2 className={styles.name}>
+                {doctor.name}, {doctor.credential}
+              </h2>
+
               <p className={styles.specialty}>{doctor.specialty}</p>
             </div>
 
-            <div className={styles.infoRow}>
-              <MapPin className={styles.icon} />
-              <span>{doctor.location}</span>
+            {/* Rating */}
+            <div className={styles.ratingBlock}>
+              <div className={styles.starRow}>
+                {[...Array(5)].map((_, index) => (
+                  <Star
+                    key={index}
+                    className={
+                      index < Math.round(doctor.rating)
+                        ? styles.starFilled
+                        : styles.starEmpty
+                    }
+                  />
+                ))}
+              </div>
+
+              <div className={styles.ratingText}>
+                {doctor.rating} out of 5<span> ({doctor.reviews} ratings)</span>
+              </div>
             </div>
 
+            <hr className={styles.divider} />
+
+            {/* Address from Database */}
+            <div className={styles.infoRow}>
+              <Building className={styles.icon} />
+
+              <div className={styles.locationBlock}>
+                <span className={styles.locationName}>{doctor.location}</span>
+
+                <span>
+                  {doctor.streetAddress} {doctor.cityStateZip}
+                </span>
+              </div>
+            </div>
+
+            {/* Phone */}
             <div className={styles.infoRow}>
               <Phone className={styles.icon} />
-              {/* Look inside doctorPhones and return the phone number that matches this doctor’s ID. */}
-              <a href={`tel:${doctorPhones[doctor.doctor_id]}`}>
-                {doctorPhones[doctor.doctor_id]}
+
+              <a
+                href={`tel:${doctor.phoneNumber}`}
+                className={styles.phoneNumber}
+              >
+                {doctor.phoneNumber}
               </a>
             </div>
 
+            {/* Accepting Patients */}
             <div className={styles.infoRow}>
               <CheckCircle
                 className={`${styles.icon} ${styles.availabilityIcon}`}
               />
+
               <span>
-                {doctor.accepting_new_patients
+                {doctor.acceptingNewPatients
                   ? "Accepting New Patients"
                   : "Not Accepting New Patients"}
               </span>
             </div>
 
-            <button className={styles.button}>Schedule Appointment</button>
+            {/* Schedule Button */}
+            <Link
+              to={`/book-appointment/${doctor.doctorId}`}
+              className={styles.button}
+            >
+              Schedule Visit
+            </Link>
           </div>
         ))}
       </section>

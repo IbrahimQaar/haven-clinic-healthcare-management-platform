@@ -1,12 +1,17 @@
 import { Link } from "react-router-dom";
 import styles from "./PatientResourcesOverview.module.css";
+import { useEffect } from "react";
 import Footer from "../../Footer/Footer";
-import ResourcesInfo from "../../../assets/ResourcesInfo.jpg";
 
 export default function PatientResourcesPage() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <>
+      {/* Page hero section */}
       <div className={styles.mainContainer}>
+        <div className={styles.heroPattern} aria-hidden="true" />
         <div className={styles.patientHero}>
           <div className={styles.patientHeroText}>
             <p className={styles.patientHeroTitle}>Patient Resources</p>
@@ -15,9 +20,10 @@ export default function PatientResourcesPage() {
             </p>
           </div>
 
+          {/* Hero image */}
           <div className={styles.patientHeroImageWrapper}>
             <img
-              src={ResourcesInfo}
+              src="/images/DocAndPatient.jpg"
               alt="Doctor and patient discussing"
               className={styles.patientHeroImage}
             />
@@ -25,6 +31,7 @@ export default function PatientResourcesPage() {
         </div>
       </div>
 
+      {/* Breadcrumb navigation */}
       <div className={styles.breadcrumbSection}>
         <div className={styles.breadcrumbNav}>
           <Link to="/" className={styles.breadcrumbLink}>
@@ -35,97 +42,135 @@ export default function PatientResourcesPage() {
         </div>
       </div>
 
+      {/* Introductory page content */}
+      {/* Introductory page content */}
       <div className={styles.middleDescriptions}>
         <p>
-          Welcome to Haven Clinic Health, where you, your family, and friends
-          receive expert medical care and compassionate healing.
-        </p>
-        <p>
-          You may have many questions about your stay with us, such as where to
-          go, how much a procedure may cost, or how to communicate with your
-          doctors, nurses, and hospital staff. In this section, you will find a
-          variety of tools to help make your time with us easier.
+          Welcome to <strong>Havenwell Health</strong>, a regional healthcare
+          system dedicated to providing exceptional care to patients and the
+          communities we serve. Our physicians, nurses, and care teams work
+          together across multiple locations to deliver compassionate,
+          high-quality medical services in a supportive environment.
         </p>
 
         <p>
-          All of your questions can be answered through our online resources or
-          by a compassionate staff member who will prioritize your physical,
-          emotional, and spiritual needs.
+          We understand that navigating healthcare can raise important
+          questions— whether you are looking for information about appointments,
+          medical records, billing, or how to stay connected with your care
+          team. This section is designed to provide clear guidance and helpful
+          resources.
+        </p>
+
+        <p>
+          Many common questions can be answered through the resources below. Our
+          care teams are also available to support you every step of the way,
+          ensuring your experience with Havenwell Health is informed,
+          respectful, and centered on your well-being.
         </p>
       </div>
 
+      {/* Resources section */}
       <div className={styles.page}>
         <div className={styles.container}>
           <div className={styles.titleContainer}>
-            <h2 className={styles.resourceTitle}>Helpful resources</h2>
+            <h2 className={styles.resourceTitle}>Patient resources</h2>
           </div>
+
+          {/* Resource cards grid */}
           <section className={styles.resourcesGrid}>
             <div className={styles.resourceCard}>
-              <Link to="/prepare" className={styles.cardTitleLink}>
-                Preparing for Your Visit
+              <Link to="/medical-records" className={styles.cardTitleLink}>
+                Medical records
               </Link>
               <p className={styles.cardDescription}>
-                Start your journey prepared. Access pre-visit forms, insurance
-                information, what to bring checklists, and everything you need
-                for a seamless appointment experience.
+                Learn how to request your medical records, access important
+                health information, and understand how Havenwell Health protects
+                your privacy and personal data.
               </p>
             </div>
 
             <div className={styles.resourceCard}>
-              <Link to="/visitors-resource" className={styles.cardTitleLink}>
-                Visitor Information
+              <Link to="/visitor-information" className={styles.cardTitleLink}>
+                Visitor information
               </Link>
               <p className={styles.cardDescription}>
-                Essential details for family and friends. Find visiting hours,
-                parking locations, amenities, and guidelines to support your
-                loved ones.
+                Find helpful guidance for planning a visit to one of our
+                Havenwell Health locations, including visitor policies and
+                important information for patients and families.
               </p>
             </div>
 
             <div className={styles.resourceCard}>
-              <Link to="/after-your-visit" className={styles.cardTitleLink}>
-                After Your Visit
+              <Link
+                to="/patient-rights-responsibilities"
+                className={styles.cardTitleLink}
+              >
+                Patient rights and responsibilities
               </Link>
               <p className={styles.cardDescription}>
-                Continue your care journey with confidence. Access discharge
-                instructions, medication guides, follow-up scheduling, and
-                recovery resources.
+                Review your rights as a patient and the shared responsibilities
+                that help ensure respectful, safe, and high-quality care.
               </p>
             </div>
 
             <div className={styles.resourceCard}>
-              <Link to="/mychart#login" className={styles.cardTitleLink}>
-                MyChart Portal
+              <Link to="/language-services" className={styles.cardTitleLink}>
+                Language and translation services
               </Link>
               <p className={styles.cardDescription}>
-                View test results, message your care team, schedule
-                appointments, and manage prescriptions online, anytime.
+                Havenwell Health provides free language assistance and
+                interpretation services for patients who prefer to communicate
+                in a language other than English.
               </p>
             </div>
 
             <div className={styles.resourceCard}>
-              <Link to="/billing-info" className={styles.cardTitleLink}>
-                Billing & Insurance
+              <Link to="/spiritual-care" className={styles.cardTitleLink}>
+                Spiritual care
               </Link>
               <p className={styles.cardDescription}>
-                Understand your costs, explore payment plans, check insurance
-                coverage, and learn about financial assistance programs.
+                Spiritual care services are available to support patients and
+                families of all faiths and belief systems, recognizing the
+                importance of caring for the whole person.
               </p>
             </div>
 
             <div className={styles.resourceCard}>
-              <Link to="/patient-rights" className={styles.cardTitleLink}>
-                Patient Rights
+              <Link to="/provide-feedback" className={styles.cardTitleLink}>
+                Provide feedback
               </Link>
               <p className={styles.cardDescription}>
-                Learn about privacy policies, informed consent, how to voice
-                concerns, and your role in healthcare decisions.
+                Share your feedback, suggestions, or concerns. Your input helps
+                Havenwell Health continue improving the care and services we
+                provide to our communities.
+              </p>
+            </div>
+
+            <div className={styles.resourceCard}>
+              <Link to="/send-ecard" className={styles.cardTitleLink}>
+                Send an eCard
+              </Link>
+              <p className={styles.cardDescription}>
+                Send a thoughtful electronic message to a patient to let them
+                know you are thinking of them during their stay or visit.
+              </p>
+            </div>
+
+            <div className={styles.resourceCard}>
+              <Link to="/policies" className={styles.cardTitleLink}>
+                Policies
+              </Link>
+              <p className={styles.cardDescription}>
+                Review important Havenwell Health policies and guidelines that
+                support a safe, respectful, and welcoming care environment for
+                patients, visitors, and staff.
               </p>
             </div>
           </section>
         </div>
       </div>
 
+      {/* Page footer */}
       <Footer />
     </>
   );

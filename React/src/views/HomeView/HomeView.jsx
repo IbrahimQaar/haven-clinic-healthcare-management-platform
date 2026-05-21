@@ -1,44 +1,54 @@
 import styles from "./HomeView.module.css";
-import GetCareNow from "../GetCareNow/GetCareNow";
+import GetCareNow from "../GetCare/GetCareNow/GetCareNow";
 import WhyChooseUs from "../WhyChooseUs/WhyChooseUs";
 import Footer from "../Footer/Footer";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
+import { useContext } from "react";
+import { UserContext } from "../../context/UserContext";
+
 export default function HomeView() {
+  const { user } = useContext(UserContext);
+
   return (
     <>
       <section className={styles.heroSection}>
-        <div className={styles.container}>
-          <div className={styles.hero}>
-            <div className={styles.heroContent}>
+        <div className={styles.heroGrid}>
+          {/* LEFT SIDE */}
+          <div className={styles.leftSide}>
+            <div className={styles.content}>
               <h1 className={styles.heroTitle}>
-                <span className={styles.lineOne}>
-                  Book trusted doctors and{" "}
-                </span>
-                <span className={styles.lineTwo}>
-                  specialists in your area{" "}
-                  <span className={styles.heroTitleHighlight}>anytime</span>
-                </span>
+                <span>Trusted Care for Our Community</span>
               </h1>
 
               <p className={styles.heroSubText}>
-                Finding the right care shouldn’t be complicated. HavenClinic
-                lets you book appointments easily, with clear availability and
-                secure scheduling.
+                Connect with trusted physicians and specialists across the
+                Havenwell Health network and schedule care with confidence.
               </p>
 
               <div className={styles.buttonRow}>
-                <button className={styles.primaryBtn}>
-                  Book Appointment <ArrowRight className={styles.btnIcon} />
-                </button>
+                <Link
+                  to={user ? "/my-appointments" : "/login"}
+                  className={styles.primaryBtn}
+                >
+                  Schedule Now <ArrowRight />
+                </Link>
 
-                <Link to="/services" className={styles.secondaryBtn}>Find a Doctor</Link>
+                <Link to="/services" className={styles.secondaryBtn}>
+                  Meet Our Doctors
+                </Link>
               </div>
             </div>
           </div>
+
+          {/* RIGHT SIDE */}
+          <div className={styles.rightSide}>
+            <img src="/images/NursingAssessPatient.png" alt="patient" />
+          </div>
         </div>
       </section>
+
       <GetCareNow />
       <WhyChooseUs />
       <Footer />

@@ -1,0 +1,360 @@
+.page {
+  min-height: 100vh;
+  padding: 64px 24px;
+  background: #f6f8fb;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+}
+
+/* ===== Layout ===== */
+
+.layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 48px;
+  /* align-items: start; */
+}
+
+.disabledDay {
+  background: #d9d9d9;
+  color: #777;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* ===== Doctor Card ===== */
+
+.doctorCard {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  /* position: sticky;
+  top: 40px; */
+}
+
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.doctorImage {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.doctorCard h2 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.specialty {
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin: 18px 0;
+}
+
+.infoList {
+  list-style: none;
+  padding: 0;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 12px;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  color: #2563eb;
+}
+
+.green {
+  color: #16a34a;
+}
+
+/* ===== Scheduler ===== */
+
+.scheduler {
+  background: white;
+  border-radius: 12px;
+  padding: 32px;
+  border: 1px solid #e5e7eb;
+}
+
+.schedulerTitle {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.schedulerSubtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 28px;
+}
+
+.noTimes {
+  grid-column: 1 / -1;
+
+  padding: 18px 16px;
+
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+
+  border-radius: 8px;
+
+  text-align: center;
+
+  font-size: 14px;
+  font-weight: 400;
+  color: #d96666;
+
+  line-height: 1.5;
+}
+
+/* ===== Calendar ===== */
+
+.calendar {
+  margin-bottom: 28px;
+}
+
+.calendarHeader {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-size: 14px;
+  font-weight: 500;
+  color: #105869;
+  margin-bottom: 6px;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.day {
+  border: 1px solid #e5e7eb;
+  background: white;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.day:hover {
+  background: #f3f4f6;
+}
+
+.selectedDay {
+  border: 1px solid #2563eb;
+  background: #eff6ff;
+  color: #1d4ed8;
+  padding: 8px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* ===== Time Slots ===== */
+
+.timeSlots {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.timeBtn {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: white;
+  font-size: 14px;
+  color: #02505e;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.timeBtn:hover {
+  border-color: #2563eb;
+  background: #f4f8ff;
+}
+
+.timeActive {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #2563eb;
+  background: #2563eb;
+  color: white;
+  font-weight: 500;
+}
+
+/* ===== Form ===== */
+
+.formTitle {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 31px;
+  color: #003c72;
+  margin-bottom: 43px;
+  text-align: center;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+} */
+
+.input {
+  width: 100%;
+  padding: 17px 14px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* radio section */
+
+.radioRow {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+/* insurance */
+
+.insuranceRow {
+  margin-bottom: 24px;
+}
+
+.select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+  color: #8d96a4;
+}
+
+.helperText {
+  font-size: 12px;
+  width: 400px;
+  background-color: #d6fbfe;
+  color: #6b7280;
+  margin-top: 14px;
+  padding-left: 1rem;
+}
+
+.newPatient {
+  font-size: 15px;
+  color: #838fa1;
+}
+
+/* ===== Button ===== */
+/* 
+.confirmBtn {
+  width: 100%;
+  padding: 14px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+} */
+
+.confirmBtn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px 26px;
+  background: #1f4c7a;
+  color: white;
+  text-decoration: none;
+  border-radius: 35px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+}
+
+.confirmBtn:hover {
+  background: #0f5395;
+}
+
+/* ===== Misc ===== */
+
+.errorText {
+  font-size: 13px;
+  font-weight: 600;
+  color: #dc2626;
+
+  margin-top: 4px;
+}
+
+.disclaimer {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 10px;
+}
+
+.form {
+  max-width: 120rem;
+  margin: 22px auto;
+  padding: 4rem 2.4rem 0;
+}

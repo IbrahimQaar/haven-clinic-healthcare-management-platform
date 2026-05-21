@@ -12,18 +12,21 @@
   justify-content: center;
   height: 10rem;
   padding: 0 8.4rem;
+
+  /* position: sticky; */
+  top: 0;
+  z-index: 10001;
+  background-color: #ffffff;
 }
 
 .logoImg {
-    height: 20.8rem;
-    margin-right: 12rem;
-
+  height: 13.8rem;
+  margin-right: 6rem;
 }
 
 .MainNav {
   z-index: 9999;
 }
-
 
 .mainNavList {
   list-style: none;
@@ -33,14 +36,13 @@
 }
 
 .mainNavLink {
-font-family: "Public Sans", "Open Sans", sans-serif;
-font-style: normal;
-font-weight: 500;
-font-size: 1.6rem;     
-line-height: 2.8rem;   
-color: #003c72;
-text-decoration: none;
-
+  font-family: "Public Sans", "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  color: #003c72;
+  text-decoration: none;
 }
 
 .mainNavLink:hover {
@@ -50,45 +52,39 @@ text-decoration: none;
   text-decoration-color: #003c72;
 }
 
-/* Right side buttons wrapper */
 .rightSection {
   margin-left: 2.8rem;
   display: flex;
   align-items: center;
   gap: 1.6rem;
   margin-left: 8rem;
-
 }
 
-/* Buttons (as links) */
 .signInButton,
 .registerButton {
   font-family: "Public Sans", "Open Sans", sans-serif;
-font-weight: 500;
-font-size: 1.6rem;       
-line-height: 2.8rem;   
-color: #003c72;
-text-decoration: none;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  color: #003c72;
+  text-decoration: none;
 }
-
 
 .signInButton,
 .registerButton {
-  border-radius: 2.4rem;        
-  height: 3.6rem;                
-  padding: 0 1.9rem;             
-  border-radius: 2.4rem;                
-  border: 1px solid #003c72;     
+  border-radius: 2.4rem;
+  height: 3.6rem;
+  padding: 0 1.9rem;
+  border-radius: 2.4rem;
+  border: 1px solid #003c72;
   display: flex;
   align-items: center;
 }
-
 
 .signInButton:hover,
 .registerButton:hover {
   box-shadow: 0 0.4rem 0.8rem rgba(0, 60, 114, 0.502);
 }
-
 
 /* =========================
    MOBILE TOGGLE BUTTON
@@ -97,20 +93,143 @@ text-decoration: none;
   border: none;
   background: none;
   cursor: pointer;
-  display: none; 
+  display: none;
 }
 
 .iconMobileNav {
   color: #6e0000;
-  font-size: 14.2rem; 
+  font-size: 14.2rem;
   font-weight: 700;
   line-height: 1;
 }
 
-
 /* =========================
    RESPONSIVE (MOBILE NAV)
-   ========================= */
+========================= */
+
+/* Large laptops / shrinking desktops (1430px → 1200px) */
+/* @media (max-width: 90em) {
+  .mainNavList {
+    gap: 2.8rem;
+  }
+
+  .mainNavLink {
+    font-size: 1.45rem;
+    white-space: nowrap;
+  }
+
+  .rightSection {
+    gap: 1.2rem;
+    margin-left: 5rem;
+  }
+
+  .signInButton,
+  .registerButton {
+    font-size: 1.45rem;
+    padding: 0 1.4rem;
+    height: 3.2rem;
+    white-space: nowrap;
+  }
+
+  .logoImg {
+    height: 11rem;
+    margin-right: 6rem;
+  }
+}
+
+@media (max-width: 75em) {
+  .mainNavList {
+    gap: 2.2rem;
+  }
+
+  .mainNavLink {
+    font-size: 1.4rem;
+    white-space: nowrap;
+  }
+
+  .rightSection {
+    gap: 1.2rem;
+    margin-left: 4rem;
+  }
+
+  .signInButton,
+  .registerButton {
+    font-size: 1.4rem;
+    padding: 0 1.2rem;
+    height: 3.2rem;
+    white-space: nowrap;
+  }
+
+  .logoImg {
+    object-fit: contain;
+    height: 12rem;
+    margin-right: 5rem;
+  }
+} */
+
+/* Large laptops / shrinking desktops (1430px → 1200px) */
+@media (max-width: 90em) {
+  .mainNavList {
+    gap: 2.8rem;
+  }
+
+  .mainNavLink {
+    font-size: 1.35rem;
+    white-space: nowrap;
+  }
+
+  .rightSection {
+    gap: 1.2rem;
+    margin-left: 5rem;
+  }
+
+  .signInButton,
+  .registerButton {
+    font-size: 1.35rem;
+    padding: 0 1.4rem;
+    height: 3.2rem;
+    white-space: nowrap;
+  }
+
+  .logoImg {
+    height: 12rem;
+    margin-right: 4rem;
+  }
+}
+
+/* Desktop squeeze zone (1177px → 945px) */
+@media (max-width: 75em) {
+  .mainNavList {
+    gap: 1.6rem;
+  }
+
+  .mainNavLink {
+    font-size: 1.25rem;
+    white-space: nowrap;
+  }
+
+  .rightSection {
+    gap: 1rem;
+    margin-left: 2.5rem;
+  }
+
+  .signInButton,
+  .registerButton {
+    font-size: 1.25rem;
+    padding: 0 1rem;
+    height: 3rem;
+    white-space: nowrap;
+  }
+
+  .logoImg {
+    height: 11.5rem;
+    margin-right: 3rem;
+  }
+}
+
+/* =========================
+   MOBILE NAV (≤ 944px)
+========================= */
 @media (max-width: 59em) {
   .header {
     justify-content: space-between;
@@ -125,8 +244,8 @@ text-decoration: none;
   }
 
   .logoImg {
-    height: 19.4rem;
-    margin-right: 0; 
+    height: 12rem;
+    margin-right: 0;
   }
 
   .btnMobileNav {
@@ -139,30 +258,57 @@ text-decoration: none;
     z-index: 10000;
   }
 
-  /* Overlay nav */
- .MainNav {
+  /* Fullscreen overlay nav */
+  /* .MainNav {
     background-color: #ebf8ff;
-    position: fixed;    
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
     transform: translateX(100%);
-    opacity: 1;
     visibility: hidden;
     pointer-events: none;
 
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.5s ease-in;
+    transition: transform 0.5s ease-in;
     z-index: 9999;
-  } 
+  }
+
+  .navOpen {
+    transform: translateX(0);
+    visibility: visible;
+    pointer-events: auto;
+  } */
+  .MainNav {
+    background-color: #ebf8ff;
+    position: fixed;
+    top: 0;
+    right: 0; /* changed */
+    width: 100%;
+    height: 100vh;
+
+    transform: translateX(100%);
+    opacity: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    pointer-events: none;
+
+    transition:
+      transform 0.5s ease,
+      opacity 0.5s ease;
+
+    z-index: 9999;
+  }
 
   .navOpen {
     transform: translateX(0);
     opacity: 1;
-    visibility: visible;
     pointer-events: auto;
   }
 
@@ -171,15 +317,12 @@ text-decoration: none;
     gap: 2.6rem;
   }
 
-  /* Mobile nav font sizes (your requirement) */
   .mainNavLink,
   .signInButton,
   .registerButton {
-    font-family: "Public Sans", "Open Sans", sans-serif;
-    font-style: normal;
-    font-weight: 500;
     font-size: 2rem;
     line-height: 3rem;
+    font-weight: 500;
     color: rgb(0, 60, 114);
   }
 
@@ -189,13 +332,10 @@ text-decoration: none;
     gap: 1.4rem;
   }
 
-  /* Hamburger icon style */
   .iconMobileNav {
-    font-family: "Public Sans", "Open Sans", sans-serif;
-    font-style: normal;
-    font-weight: 400;
     font-size: 3.6rem;
-    line-height: normal;
-    color: rgb(12, 11, 90);
+    font-weight: 400;
+    color: #003c72;
+    /* color: rgb(12, 11, 90); */
   }
 }

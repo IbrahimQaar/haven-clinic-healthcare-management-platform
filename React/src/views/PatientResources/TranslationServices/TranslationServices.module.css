@@ -1,0 +1,225 @@
+/* HERO CONTAINER */
+.mainContainer {
+  position: relative;
+  background-color: rgb(220, 239, 245);
+  overflow: hidden;
+}
+
+.heroPattern {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -90px;
+  width: calc(38vw + 25px);
+  /* max-width: 960px; */
+  max-width: 420px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 0 C20 20 20 20 0 30 C20 40 20 40 30 60 C40 40 40 40 60 30 C40 20 40 20 30 0Z' fill='none' stroke='%23003c72' stroke-width='1'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 60px 60px;
+  background-position: right top;
+}
+
+/* HERO CONTENT */
+.patientHero {
+  position: relative;
+  z-index: 2;
+  max-width: 118rem;
+  margin: 0 auto;
+  padding: 9.5rem 1.25rem 7.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.patientHeroText {
+  min-width: 0;
+}
+
+.patientHeroTitle {
+  font-family: "ABC Arizona Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 56px;
+  line-height: 73px;
+  color: rgb(0, 60, 114);
+  white-space: nowrap;
+}
+
+/* BREADCRUMBS */
+.breadcrumbSection {
+  padding: 0 0 0 2rem;
+}
+
+.breadcrumbNav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 120rem;
+  margin: 22px auto;
+}
+
+.breadcrumbLink,
+.breadcrumbSeparator {
+  font-family: "Public Sans", "Open Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 32px;
+  color: rgb(0, 60, 114);
+}
+
+.breadcrumbLink {
+  text-decoration: none;
+}
+
+.breadcrumbLink:hover {
+  text-decoration: underline;
+}
+
+.translationSection {
+  max-width: 120rem;
+  margin: 22px auto;
+  padding: 4rem 2.4rem 0;
+}
+
+.sectionHeading {
+  font-family: "ABC Arizona Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 31px;
+  color: rgb(0, 60, 114);
+  margin: 3.2rem 0 1.6rem;
+}
+
+.servicesList {
+  margin: 1.6rem 0 3.4rem 2rem;
+  padding-left: 2.4rem;
+}
+
+.servicesList li {
+  margin-bottom: 0.8rem;
+}
+
+.servicesList li::marker {
+  color: #2f91e2;
+  font-size: 1.4em;
+}
+
+.bodyText {
+  font-family: "Public Sans", "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 32px;
+  color: rgb(40, 40, 40);
+  margin-top: 2.4rem;
+}
+
+/* ===============================
+TABLET
+================================ */
+
+@media (max-width: 1024px) {
+  .heroPattern {
+    display: none;
+  }
+
+  .patientHero {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .patientHeroTitle {
+    font-size: 44px;
+    line-height: 58px;
+  }
+
+  .translationSection {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .bodyText {
+    width: 100%;
+  }
+
+  .servicesList {
+    width: 100%;
+    line-height: 34px;
+  }
+
+  .sectionHeading {
+    font-size: 34px;
+    line-height: 44px;
+  }
+}
+
+/* ===============================
+MOBILE
+================================ */
+
+@media (max-width: 768px) {
+  .heroPattern {
+    display: none;
+  }
+
+  .patientHero {
+    padding: 1.5rem 2rem 3rem;
+    gap: 2.6rem;
+  }
+
+  .patientHeroTitle {
+    font-size: 34px;
+    line-height: 42px;
+  }
+
+  .sectionHeading {
+    font-size: 26px;
+    line-height: 36px;
+  }
+
+  .bodyText,
+  .servicesList li,
+  .breadcrumbLink,
+  .breadcrumbSeparator {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .translationSection {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .breadcrumbSection {
+    padding-left: 2rem;
+  }
+}
+
+/* ===============================
+SMALL PHONES
+================================ */
+
+@media (max-width: 480px) {
+  .patientHeroTitle {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .sectionHeading {
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  .heroPattern {
+    display: none;
+  }
+
+  .translationSection {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}

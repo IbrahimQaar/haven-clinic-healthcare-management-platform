@@ -10,45 +10,54 @@ export default function RegisterView() {
 
   const [notification, setNotification] = useState(null);
 
-  // Setup state for the registration data
-  const [username, setUsername] = useState("");
+  // Setup state
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+
+  const [emailError, setEmailError] = useState("");
 
   function handleSubmit(event) {
     event.preventDefault();
 
-    // Validate the form data
-    if (password !== confirmPassword) {
-      // Passwords don't match, so display error notification
-      setNotification({ type: "error", message: "Passwords do not match." });
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Email validation (shown on page, not popup)
+    if (!emailRegex.test(email)) {
+      setEmailError("Please enter a valid email.");
+      return;
     } else {
-      // If no errors, send data to server
-      AuthService.register({
-        username,
-        password,
-        confirmPassword,
-        role: "user",
-      })
-        .then(() => {
-          setNotification({
-            type: "success",
-            message: "Registration successful",
-          });
-          navigate("/login");
-        })
-        .catch((error) => {
-          // Check for a response message, but display a default if that doesn't exist
-          const message =
-            error.response?.data?.message || "Registration failed.";
-          setNotification({ type: "error", message: message });
-        });
+      setEmailError("");
     }
+
+    // Password validation (still popup)
+    if (password !== confirmPassword) {
+      setNotification({ type: "error", message: "Passwords do not match." });
+      return;
+    }
+
+    AuthService.register({
+      email,
+      password,
+      confirmPassword,
+      role: "user",
+    })
+      .then(() => {
+        setNotification({
+          type: "success",
+          message: "Registration successful",
+        });
+        navigate("/login");
+      })
+      .catch((error) => {
+        const message = error.response?.data?.message || "Registration failed.";
+        setNotification({ type: "error", message: message });
+      });
   }
 
   return (
     <div className={styles.viewRegister}>
-      <h2>Register</h2>
+      <h2 className={styles.registerTitle}>Create Account</h2>
 
       <Notification
         notification={notification}
@@ -57,27 +66,34 @@ export default function RegisterView() {
 
       <form onSubmit={handleSubmit}>
         <div className={styles.formControl}>
-          <label htmlFor="username">Username:</label>
+          <label htmlFor="email">Email Address</label>
           <input
-            type="text"
-            id="username"
-            value={username}
+            type="email"
+            id="email"
+            value={email}
             size="50"
             required
             autoFocus
-            autoComplete="username"
-            onChange={(event) => setUsername(event.target.value)}
+            autoComplete="email"
+            placeholder="name@example.com"
+            onChange={(event) => setEmail(event.target.value)}
           />
+
+          {/* 🔥 Error shown here */}
+          {emailError && (
+            <p style={{ color: "red", marginTop: "5px" }}>{emailError}</p>
+          )}
         </div>
 
         <div className={styles.formControl}>
-          <label htmlFor="password">Password:</label>
+          <label htmlFor="password">Password</label>
           <input
             type="password"
             id="password"
             value={password}
             size="50"
             required
+            placeholder="Enter your password"
             onChange={(event) => setPassword(event.target.value)}
           />
         </div>

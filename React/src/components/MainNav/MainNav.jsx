@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { UserContext } from "../../context/UserContext";
 import styles from "./MainNav.module.css";
-import logoImage from "../../assets/HavenClinci.png";
 
 export default function MainNav() {
   const { user } = useContext(UserContext);
@@ -26,7 +25,7 @@ export default function MainNav() {
       <header className={styles.header}>
         <Link to="/" className={styles.logoLink}>
           <img
-            src={logoImage}
+            src="/images/FinalNewLogo.png"
             alt="Haven Clinic logo"
             className={styles.logoImg}
           />
@@ -35,7 +34,12 @@ export default function MainNav() {
         <nav className={`${styles.MainNav} ${isOpen ? styles.navOpen : ""}`}>
           <ul className={styles.mainNavList}>
             <li>
-              <NavLink to="/" end onClick={closeNav}className={styles.mainNavLink}>
+              <NavLink
+                to="/"
+                end
+                onClick={closeNav}
+                className={styles.mainNavLink}
+              >
                 Home
               </NavLink>
             </li>
@@ -56,7 +60,7 @@ export default function MainNav() {
                 onClick={closeNav}
                 className={styles.mainNavLink}
               >
-                Find Services
+                Find a Doctor
               </NavLink>
             </li>
 
@@ -80,15 +84,15 @@ export default function MainNav() {
               </NavLink>
             </li>
 
-            <div className={styles.rightSection}>
+            <li className={styles.rightSection}>
               {user ? (
                 <>
                   <NavLink
-                    to="/userProfile"
+                    to="/my-appointments"
                     className={styles.signInButton}
                     onClick={closeNav}
                   >
-                    Profile
+                    My Appointments
                   </NavLink>
 
                   <Link
@@ -118,7 +122,7 @@ export default function MainNav() {
                   </NavLink>
                 </>
               )}
-            </div>
+            </li>
           </ul>
         </nav>
 

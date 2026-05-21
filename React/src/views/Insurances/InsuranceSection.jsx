@@ -3,34 +3,32 @@ import styles from "./InsuranceSection.module.css";
 export function InsuranceSection() {
   return (
     <section id="insurance" className={styles.section}>
-      {/* Decorative elements */}
       <div className={styles.container}>
         {/* Header */}
         <div className={styles.header}>
-          <h2 className={styles.title}>
-            Insurance Plans
-            <span className={styles.titleGradient}>We Accept</span>
-          </h2>
+          <h2 className={styles.title}>Insurance Plans We Accept</h2>
           <p className={styles.subtitle}>
-            We’re proud to serve our patients and communities across Ohio,
-            including Dublin, Cincinnati, Dayton, Columbus, and Cleveland, as a
-            trusted provider of high-quality healthcare services. At Haven
-            Clinic, we work hard to build strong relationships with most major
-            health insurance plans in our area so that care remains accessible
-            and affordable.
+            We are proud to serve patients and communities across Ohio,
+            including Dublin, Cincinnati, Dayton, Columbus, and Cleveland,
+            through the Havenwell Health network. Our physicians, specialists,
+            and care teams are committed to delivering high-quality healthcare
+            that is accessible, coordinated, and centered around the needs of
+            every patient we serve.
           </p>
 
           <p className={`${styles.subtitle} ${styles.subtitleStrong}`}>
-            As you explore health plans that meet your needs and allow you to
-            continue receiving the care you trust, you can feel confident
-            knowing that Haven Clinic participates in many major insurance
-            networks, along with other commonly accepted plans.
+            Havenwell Health works with many major health insurance providers
+            across the region to help ensure patients can access the care they
+            need with confidence. Our participation in a wide range of insurance
+            networks helps make high-quality care more convenient and affordable
+            for individuals and families throughout the communities we serve.
           </p>
 
           <p className={`${styles.subtitle} ${styles.subtitleStrong}`}>
-            Because insurance contracts and coverage details can change, we
-            recommend confirming your benefits directly with your insurance
-            provider or plan administrator.
+            Because insurance coverage and provider participation may change
+            over time, we recommend confirming your benefits and coverage
+            directly with your insurance provider or plan administrator before
+            scheduling care.
           </p>
         </div>
 

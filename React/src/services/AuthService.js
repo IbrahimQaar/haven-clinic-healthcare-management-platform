@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 
 /**
  * This service class is used to interact with the server's Authentication API.
@@ -6,17 +6,15 @@ import axios from 'axios';
  * error responses appropriately.
  */
 export default {
-
   login(user) {
-    return axios.post('/login', user);
+    return axios.post("/login", user);
   },
 
   register(user) {
-    return axios.post('/register', user);
+    return axios.post("/register", user);
   },
 
   getUserProfile(userId) {
     return axios.get(`/users/${userId}`);
   },
-
-}
+};

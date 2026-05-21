@@ -1,12 +1,14 @@
 package com.techelevator.dao;
 
-import com.techelevator.model.dto.DoctorsInfo;
+import com.techelevator.model.dto.Doctors;
+
 import java.util.List;
 
 public interface DoctorsDao {
-     List<DoctorsInfo> getAllDoctors();
-    DoctorsInfo getDoctorById(int doctorId);
 
-    List<DoctorsInfo> getAllDoctorsInformation();
+    List<Doctors> getAllDoctors();
 
+    Doctors getDoctorById(int doctorId);
+
+    List<Doctors> getAllHospitalLocations();
 }

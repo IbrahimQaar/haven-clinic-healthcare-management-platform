@@ -3,6 +3,36 @@
   background-color: rgb(220, 239, 245);
 }
 
+/* HERO CONTAINER */
+.mainContainer {
+  position: relative;
+  background-color: rgb(220, 239, 245);
+  overflow: hidden;
+}
+
+.heroPattern {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -90px;
+  width: calc(38vw + 25px);
+  /* max-width: 960px; */
+  max-width: 420px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 0 C20 20 20 20 0 30 C20 40 20 40 30 60 C40 40 40 40 60 30 C40 20 40 20 30 0Z' fill='none' stroke='%23003c72' stroke-width='1'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 60px 60px;
+  background-position: right top;
+}
+
+/* HERO CONTENT */
+.patientHero {
+  position: relative;
+  z-index: 2;
+  max-width: 118rem;
+  margin: 0 auto;
+  padding: 9.5rem 1.25rem 7.5rem;
+}
+
 .patientHero {
   max-width: 118rem;
   margin: 0 auto 3.4rem;
@@ -16,17 +46,21 @@
 .patientHeroTitle {
   font-family: "ABC Arizona Serif", serif;
   font-weight: 400;
-  font-size: 5.6rem;
-  color: #003c72;
-  margin: 0 0 3.6rem;
+  font-style: normal;
+  font-size: 56px;
+  line-height: 73px;
+  color: rgb(0, 60, 114);
+  white-space: nowrap;
 }
 
 .patientHeroSubtitle {
   font-weight: 400;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   line-height: 4.3rem;
   color: #003c72;
   margin: 0;
+  white-space: nowrap;
+  word-break: keep-all;
 }
 
 .patientHeroImage {
@@ -46,6 +80,7 @@
   gap: 2.2rem;
   max-width: 120rem;
   margin: 0 auto;
+  padding: 23px 0 0 0;
 }
 
 .breadcrumbLink {
@@ -117,7 +152,8 @@
 }
 
 .cardTitleLink:hover {
-  text-decoration-color: #ffe607;
+  /* text-decoration-color: #ffe607; */
+  text-decoration-color: #236f81;
   text-decoration-thickness: 2px;
 }
 
@@ -145,18 +181,18 @@
   text-decoration-color: red !important;
 }
 
+/* @media (max-width: 1024px) {
+  .heroPattern {
+    display: none;
+  }
+}
+
 @media (max-width: 900px) {
   .patientHero {
     grid-template-columns: 1fr;
     gap: 2.8rem;
     background-color: #def3ff;
   }
-
-  /* .patientHeroImageWrapper { */
-  /* order: 1; */
-  /* width: 100%; */
-  /* margin: 0 auto; */
-  /* } */
 
   .patientHeroText {
     order: 2;
@@ -211,4 +247,157 @@
     font-size: 1.6rem;
     line-height: 2.9rem;
   }
+} */
+/* ===============================
+TABLET
+================================ */
+
+/* ===============================
+TABLET
+================================ */
+
+@media (max-width: 1024px) {
+  .heroPattern {
+    display: none;
+  }
+
+  .patientHero {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  /* Image first and controlled size */
+  .patientHeroImageWrapper {
+    order: -1;
+    position: relative;
+    border-radius: 16px;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 600 / 340;
+  }
+
+  .patientHeroImage {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    inset: 0px;
+    aspect-ratio: 16 / 9;
+  }
+
+  .middleDescriptions {
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .resourcesGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .cardDescription {
+    width: 100%;
+    line-height: 34px;
+  }
+
+  .patientHeroTitle {
+    font-size: 44px;
+    line-height: 58px;
+  }
+
+  .resourceTitle,
+  .cardTitleLink {
+    font-size: 24px;
+    line-height: 44px;
+  }
+}
+
+/* ===============================
+MOBILE
+================================ */
+
+@media (max-width: 768px) {
+  .heroPattern {
+    display: none;
+  }
+
+  .patientHero {
+    padding: 1.5rem 2rem 3rem;
+    gap: 2.6rem;
+  }
+
+  .patientHeroTitle {
+    font-size: 34px;
+    line-height: 42px;
+  }
+
+  .patientHeroSubtitle {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .resourceTitle,
+  .cardTitleLink {
+    /* font-size: 26px; */
+    font-size: 22px;
+    line-height: 36px;
+  }
+
+  .middleDescriptions,
+  .cardDescription,
+  .breadcrumbLink,
+  .breadcrumbSeparator {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .resourcesGrid {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .page {
+    padding: 4rem 2rem 6rem;
+  }
+
+  .breadcrumbSection {
+    padding-left: 2rem;
+  }
+}
+
+/* ===============================
+SMALL PHONES
+================================ */
+
+@media (max-width: 480px) {
+  .patientHeroTitle {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .resourceTitle,
+  .cardTitleLink {
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  .heroPattern {
+    display: none;
+  }
+}
+
+/* Ensure content never touches edges */
+
+.mainContainer,
+.patientHero,
+.middleDescriptions,
+.breadcrumbNav,
+.container {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }

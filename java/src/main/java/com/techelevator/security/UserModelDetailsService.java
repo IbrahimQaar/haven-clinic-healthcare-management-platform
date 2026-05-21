@@ -48,7 +48,6 @@ public class UserModelDetailsService implements UserDetailsService {
         if (!user.isActivated()) {
             throw new UserNotActivatedException("User " + lowercaseLogin + " was not activated");
         }
-
         List<GrantedAuthority> grantedAuthorities = new ArrayList<>();
         Set<Authority> userAuthorities = user.getAuthorities();
         for (Authority authority : userAuthorities) {

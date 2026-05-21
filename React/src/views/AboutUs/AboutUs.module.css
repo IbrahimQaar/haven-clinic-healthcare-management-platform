@@ -1,10 +1,27 @@
 .mainContainer {
   background: #eaf5fb;
-  padding: 8.25rem 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroPattern {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -90px;
+  width: calc(38vw + 25px);
+  max-width: 420px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 0 C20 20 20 20 0 30 C20 40 20 40 30 60 C40 40 40 40 60 30 C40 20 40 20 30 0Z' fill='none' stroke='%23003c72' stroke-width='1'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 60px 60px;
+  background-position: right top;
+  z-index: 0;
 }
 
 .aboutUsHero {
-  max-width: 1180px;
+  position: relative;
+  z-index: 2;
+  max-width: 120rem;
   margin: 0 auto;
   padding: 1.75rem 1.25rem 4.5rem;
   display: grid;
@@ -13,9 +30,12 @@
   gap: 24.4rem;
 }
 
+.aboutUsText {
+  min-width: 0;
+}
+
 .aboutUsTitle {
   font-family: "ABC Arizona Serif", serif;
-  font-style: normal;
   font-weight: 400;
   font-size: 5.6rem;
   color: #003c72;
@@ -27,7 +47,11 @@
   font-size: 2.4rem;
   line-height: 4.3rem;
   color: #003c72;
-  margin: 0;
+}
+
+.aboutUsImageWrapper {
+  position: relative;
+  z-index: 3;
 }
 
 .aboutUsImage {
@@ -38,51 +62,57 @@
   display: block;
 }
 
-.aboutUsContent {
-  /* max-width: 1200px; */
-  max-width: 1350px;
-  padding: 4rem 9.4rem;
+/* Breadcrumbs */
+.breadcrumbSection {
+  padding-left: 2rem;
+}
+
+.breadcrumbNav {
   display: flex;
-  flex-direction: column;
-  padding-left: 35rem;
+  align-items: center;
+  gap: 1rem;
+  max-width: 120rem;
+  margin: 22px auto;
+}
+
+.breadcrumbLink,
+.breadcrumbSeparator {
+  font-family: "Public Sans", "Open Sans", sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+  color: rgb(0, 60, 114);
+}
+
+.breadcrumbLink {
+  text-decoration: none;
+}
+
+.breadcrumbLink:hover {
+  text-decoration: underline;
+}
+
+/* Content */
+.aboutUsContainer {
+  max-width: 120rem;
+  margin: 16px auto;
+  padding: 2rem 2.4rem;
 }
 
 .aboutUsParagraph {
   font-family: "Public Sans", "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.8rem;
-  line-height: 3.2rem;
+  font-size: 18px;
+  line-height: 32px;
   color: rgb(40, 40, 40);
-  margin-bottom: 2.8rem;
-}
-
-.breadcrumb {
-  display: flex;
-  align-items: center;
-  gap: 2.2rem;
-  margin-bottom: 3.8rem;
-}
-
-.breadcrumbLink {
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.breadcrumbCurrent {
-  font-weight: 600;
-}
-
-.symbol {
-  font-weight: 700;
+  margin-top: 1.2rem;
 }
 
 .threeCardContainer {
+  max-width: 120rem;
+  margin: 16px auto;
+  padding: 5rem 2.4rem 2.4rem;
   display: flex;
-  width: 155rem;
-  padding: 1.2rem 12.4rem;
-  margin-bottom: 6.2rem;
-  padding-left: 35rem;
+  flex-wrap: wrap;
+  gap: 2.4rem;
 }
 
 .cardOne,
@@ -90,190 +120,188 @@
 .cardThree {
   width: 100%;
   padding: 4rem 3.5rem;
-  height: 35rem;
-  border-radius: 1.8rem;
+  /* height: 35rem; */
+  height: 25rem;
+  border-radius: 1.2rem;
 }
 
-/* Card 1 */
 .cardOne {
-  background-color: #003c72;
+  background-color: #5fb8fa;
 }
 
-.cardOne .cardTitle,
-.cardOne .cardBodyText {
-  color: #ffffff;
-  width: 31rem;
-}
-
-.cardOne .cardTitle {
-  margin-bottom: 1.4rem;
-}
-.cardBodyText {
-  line-height: 3.2rem;
-}
-
-/* Card 2 */
 .cardTwo {
   background-color: #c6e0ee;
 }
 
-.cardTwo .cardTitle {
-  color: #003c72;
-  margin-bottom: 1.4rem;
-}
-
-.cardTwo .cardBodyText {
-  color: #1b2a38;
-  line-height: 3.2rem;
-}
-
-/* Card 3 */
 .cardThree {
   background-color: #ffffff;
   border: 0.1rem solid #003c72;
 }
 
-.cardThree .cardTitle {
-  color: #003c72;
+.cardTitle {
   margin-bottom: 1.4rem;
 }
 
-.cardThree .cardBodyText {
-  color: #1b2a38;
+.cardBodyText {
   line-height: 3.2rem;
+  font-size: 18px;
 }
 
 .valuesList {
-  margin: 0;
   padding-left: 2.2rem;
-  color: #1b2a38;
   line-height: 1.7;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 4rem;
+  row-gap: 1.6rem;
+
+  list-style: disc;
 }
 
 .valuesList li {
-  margin-bottom: 2.2rem;
+  font-family: "Public Sans", "Open Sans", sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+  margin-bottom: 0;
+  list-style-position: outside;
 }
 
 .valuesList li::marker {
   color: #2d7dd2;
+  font-size: 1.4em;
 }
 
-@media (max-width: 900px) {
-  .mainContainer {
-    padding: 1.5rem 0 0;
-  }
-  .aboutUsHero {
-    grid-template-columns: 1fr;
-    gap: 2.8rem;
-    padding: 2.4rem 1rem 3.2rem;
-    background-color: #def3ff;
+/* ===============================
+TABLET
+================================ */
+
+@media (max-width: 1024px) {
+  .heroPattern {
+    display: none;
   }
 
-  Image first .aboutUsImageWrapper {
-    order: 1;
+  .aboutUsHero {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .aboutUsImageWrapper {
+    order: -1;
+    position: relative;
+    border-radius: 16px;
     width: 100%;
-    margin: 0 auto;
+    height: 100%;
+    aspect-ratio: 600 / 340;
   }
 
   .aboutUsImage {
+    position: absolute;
+    height: 100%;
     width: 100%;
+    inset: 0px;
     aspect-ratio: 16 / 9;
-    border-radius: 1.8rem;
-    object-fit: cover;
-  }
-
-  /* Text second */
-  .aboutUsText {
-    order: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  /* Title style */
-  .aboutUsTitle {
-    font-family: "ABC Arizona Serif", serif;
-    font-weight: 400;
-    font-size: 3.8rem;
-    line-height: 4.9rem;
-    color: rgb(0, 60, 114);
-    margin: 0 0 1.2rem 0;
-  }
-
-  /* Subtitle style */
-  .aboutUsSubtitle {
-    font-family: "Public Sans", "Open Sans", sans-serif;
-    font-weight: 500;
-    font-size: 2rem; /* 20px */
-    line-height: 3.6rem; /* 36px */
-    color: rgb(0, 60, 114);
-    margin: 0;
-  }
-
-  .container {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 2.4rem;
-  }
-
-  .aboutUsContent {
-    /* max-width: 36rem; */
-    max-width: 45rem;
-    margin: 0 auto;
-    padding: 3rem 0;
-    text-align: left;
-    align-items: flex-start;
-  }
-
-  .breadcrumbWrapper {
-    width: 100%;
-  }
-
-  .breadcrumb {
-    justify-content: flex-start;
-    margin-bottom: 2.4rem;
-  }
-
-  .breadcrumbLink,
-  .breadcrumbCurrent,
-  .symbol {
-    font-family: "Public Sans", "Open Sans", sans-serif;
-    font-weight: 500;
-    font-size: 1.8rem; /* 18px */
-    line-height: 3.2rem; /* 32px */
-    color: rgb(0, 60, 114);
   }
 
   .aboutUsParagraph {
     width: 100%;
-    font-family: "Public Sans", "Open Sans", sans-serif;
-    font-weight: 400;
-    font-size: 1.6rem; /* 16px */
-    line-height: 2.9rem; /* 29px */
-    color: rgb(40, 40, 40);
-    margin: 0 0 2.4rem;
   }
 
-  /* Cards: stacked + centered like your screenshot */
+  .aboutUsTitle {
+    font-size: 44px;
+    line-height: 58px;
+  }
+
+  .cardTitle {
+    font-size: 34px;
+    line-height: 44px;
+  }
+
   .threeCardContainer {
-    width: 100%;
-    margin: 2.4rem auto 6.2rem;
-    padding: 0;
-    display: flex;
+    justify-content: center;
+  }
+}
+
+/* ===============================
+MOBILE
+================================ */
+
+@media (max-width: 768px) {
+  .heroPattern {
+    display: none;
+  }
+
+  .aboutUsHero {
+    padding: 1.5rem 1.6rem 3rem;
+    gap: 2.6rem;
+  }
+
+  .aboutUsTitle {
+    font-size: 34px;
+    line-height: 42px;
+  }
+
+  .aboutUsSubtitle {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .cardTitle {
+    font-size: 26px;
+    line-height: 36px;
+  }
+
+  .aboutUsParagraph,
+  .cardBodyText,
+  .valuesList li,
+  .breadcrumbLink,
+  .breadcrumbSeparator {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .threeCardContainer {
     flex-direction: column;
-    max-width: 36rem;
+    align-items: center;
+    padding: 4rem 1.6rem;
   }
 
   .cardOne,
   .cardTwo,
   .cardThree {
     width: 100%;
-    height: auto;
-    padding: 3.2rem 2.6rem;
-    border-radius: 1.8rem;
+    max-width: 420px;
   }
 
-  .valuesList li {
-    margin-bottom: 1.6rem;
+  .aboutUsContainer {
+    padding: 1rem 1.6rem;
+  }
+
+  .breadcrumbSection {
+    padding-left: 1.6rem;
+  }
+
+  .valuesList {
+    margin-left: 18px;
+  }
+}
+
+/* ===============================
+SMALL PHONES
+================================ */
+
+@media (max-width: 480px) {
+  .aboutUsTitle {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .cardTitle {
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  .heroPattern {
+    display: none;
   }
 }

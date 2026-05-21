@@ -1,0 +1,182 @@
+/* =========================
+   FULL PAGE BACKGROUND
+   ========================= */
+.portalPage {
+  background-color: #e6f6fb;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* =========================
+   HERO CONTAINER
+   ========================= */
+.mainContainer {
+  position: relative;
+  overflow: hidden;
+}
+
+.heroPattern {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 0 C20 20 20 20 0 30 C20 40 20 40 30 60 C40 40 40 40 60 30 C40 20 40 20 30 0Z' fill='none' stroke='%23003c72' stroke-width='1'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 60px 60px;
+  background-position: left top;
+}
+
+.patientHero {
+  position: relative;
+  z-index: 2;
+  max-width: 118rem;
+  margin: 0 auto;
+  padding: 4.5rem 1.25rem 7.5rem;
+}
+
+/* =========================
+   MAIN CONTENT
+   ========================= */
+.portalSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.portalIntro {
+  padding: 6rem 0;
+  text-align: center;
+}
+
+/* =========================
+   HEADINGS
+   ========================= */
+.portalHeading {
+  font-family: "ABC Arizona Serif", serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 73px;
+  color: rgb(0, 60, 114);
+  padding-bottom: 25px;
+}
+
+.portalSubheading {
+  display: block;
+  font-family: "ABC Arizona Serif", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 73px;
+  color: rgb(0, 60, 114);
+}
+
+.comingSoon {
+  font-family: "ABC Arizona Serif", serif;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 73px;
+  color: rgb(0, 60, 114);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+/* =========================
+   DESCRIPTION
+   ========================= */
+.portalDescription {
+  color: rgb(0, 60, 114);
+  font-family: "Public Sans", "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 43px;
+  max-width: 94rem;
+  margin: 0 auto;
+}
+
+/* =========================
+   GRID
+   ========================= */
+.portalGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2.4rem;
+}
+
+/* =========================
+   CARDS
+   ========================= */
+.portalCard {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e6eef5;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cardHeader h3 {
+  font-family: "Public Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #0b3a68;
+  white-space: nowrap;
+}
+
+.icon {
+  color: #2f91e2;
+  width: 28px;
+  height: 28px;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #eef3f8;
+  margin: 1.2rem 0;
+}
+
+.cardList {
+  padding-left: 1.6rem;
+}
+
+.cardList li {
+  font-family: "Public Sans", sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #344054;
+  margin-bottom: 0.6rem;
+}
+
+.cardList li::marker {
+  color: #2f91e2;
+  font-size: 1.2em;
+}
+
+/* =========================
+   TABLET
+   ========================= */
+@media (max-width: 900px) {
+  .portalHeading {
+    font-size: 26px;
+    line-height: 46px;
+  }
+
+  .portalSubheading,
+  .comingSoon {
+    font-size: 26px;
+    line-height: 42px;
+  }
+
+  .portalDescription {
+    font-size: 16px;
+    line-height: 42px;
+  }
+
+  .cardList li {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}

@@ -1,0 +1,419 @@
+.internalMedicineContainer {
+  background: #eaf5fb;
+  position: relative;
+  overflow: hidden;
+}
+
+.internalMedicineHeroTitle {
+  font-family: "ABC Arizona Serif", serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(0, 60, 114);
+  font-size: 56px;
+  line-height: 73px;
+}
+
+.internalMedicinePattern {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -90px;
+  width: calc(38vw + 25px);
+  max-width: 420px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 0 C20 20 20 20 0 30 C20 40 20 40 30 60 C40 40 40 40 60 30 C40 20 40 20 30 0Z' fill='none' stroke='%23003c72' stroke-width='1'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 60px 60px;
+  background-position: right top;
+  z-index: 0;
+}
+
+.internalMedicineHero {
+  position: relative;
+  z-index: 2;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 1.75rem 2rem 4.5rem;
+  display: grid;
+  grid-template-columns: 1.05fr 1.25fr;
+  align-items: center;
+  gap: 24.4rem;
+}
+
+/* Quick Links */
+
+.internalMedicineQuickLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.8rem;
+  border-top: 1.8px solid #b8c2d0;
+  border-bottom: 1.8px solid #b8c2d0;
+  padding: 1.5rem 0;
+}
+
+.internalMedicineLink {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  text-decoration: none;
+  font-family: "Public Sans", "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: rgb(0, 60, 114);
+}
+
+.internalMedicineIcon {
+  font-size: 2rem;
+  color: #2f7fd3;
+}
+
+.internalMedicineArrow {
+  font-size: 2rem;
+  color: #2f7fd3;
+}
+
+/* Breadcrumb */
+
+.internalMedicineBreadcrumbSection {
+  padding-left: 2rem;
+}
+
+.internalMedicineBreadcrumbNav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 120rem;
+  margin: 22px auto;
+}
+
+.internalMedicineBreadcrumbLink,
+.internalMedicineBreadcrumbSeparator {
+  font-family: "Public Sans", "Open Sans", sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+  color: rgb(0, 60, 114);
+  text-decoration: none;
+}
+.internalMedicineBreadcrumbLink:hover {
+  text-decoration-line: underline;
+  text-decoration-color: #25a3b5;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.internalMedicineSection {
+  max-width: 120rem;
+  margin: 22px auto;
+  padding: 1rem 2.4rem 0;
+}
+
+.internalMedicineTitle {
+  font-family: "ABC Arizona Serif", serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 52px;
+  color: rgb(0, 60, 114);
+  margin: 3.4rem 0;
+}
+
+.internalMedicineDescription {
+  font-family: "Public Sans", "Open Sans", sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+  color: rgb(40, 40, 40);
+  max-width: 850px;
+}
+
+.internalMedicineSubtitle {
+  font-family: "Public Sans", "Open Sans", sans-serif;
+  font-weight: 500;
+  color: rgb(0, 60, 114);
+  font-size: 23px;
+  line-height: 43px;
+}
+
+/* Care Team */
+
+.careTeamSection {
+  margin-bottom: 4.4rem;
+}
+
+.careTitle {
+  font-family: "ABC Arizona Serif", serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: rgb(0, 60, 114);
+  margin-bottom: 1.6rem;
+}
+
+.careTeamContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.careTeamDescription {
+  width: 100%;
+  font-family: "Public Sans", "Open Sans", sans-serif;
+  font-size: 18px;
+  line-height: 45px;
+  color: rgb(40, 40, 40);
+}
+
+.findDoctorButton {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 26px;
+  background: #1f4c7a;
+  color: white;
+  text-decoration: none;
+  border-radius: 35px;
+  font-size: 18px;
+}
+
+.findDoctorButton:hover {
+  background-color: #2866a1;
+}
+
+.careTeamImage img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Why Choose */
+
+.whyChooseTitle {
+  font-family: "ABC Arizona Serif", serif;
+  font-size: 40px;
+  margin: 3.4rem 0;
+}
+
+.whyChooseList {
+  margin: 10px 0 30px 24px;
+}
+
+.whyChooseList li {
+  font-family: "Public Sans", "Open Sans", sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+  margin-bottom: 12px;
+}
+
+.whyChooseList li::marker {
+  color: #2f91e2;
+  font-size: 1.4em;
+}
+
+/* Next Steps */
+
+.nextStepsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #25a3b5;
+  padding: 69px 0;
+  margin-top: 8.4rem;
+}
+
+.nextStepsTitle {
+  font-family: "ABC Arizona Serif", serif;
+  font-size: 36px;
+  color: #effeff;
+  margin-bottom: 41px;
+}
+
+.nextStepsActions {
+  display: flex;
+  gap: 20px;
+}
+
+.nextStepItem {
+  display: flex;
+  gap: 14px;
+  font-family: "Public Sans", "Open Sans", sans-serif;
+  font-size: 18px;
+  padding: 12px 26px;
+  background: #f9f9f9;
+  border-radius: 14px;
+  text-decoration: none;
+}
+
+.nextStepItem:hover {
+  text-decoration-line: underline;
+  text-decoration-color: #067b8e;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.nextStepsIcon {
+  font-size: 2rem;
+  color: #2f7fd3;
+}
+
+/* ===============================
+TABLET
+================================ */
+
+@media (max-width: 1024px) {
+  .internalMedicinePattern {
+    display: none;
+  }
+
+  .internalMedicineHero {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  /* Image first and controlled size */
+  .internalMedicineImageWrapper {
+    order: -1;
+    position: relative;
+    border-radius: 16px;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 600 / 340;
+  }
+
+  .internalMedicineImage {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    inset: 0px;
+    aspect-ratio: 16 / 9;
+  }
+
+  .internalMedicineDescription {
+    width: 100%;
+  }
+
+  .careTeamContent {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .careTeamDescription {
+    width: 100%;
+    line-height: 34px;
+  }
+
+  .internalMedicineHeroTitle {
+    font-size: 44px;
+    line-height: 58px;
+  }
+
+  .internalMedicineTitle,
+  .careTitle,
+  .whyChooseTitle {
+    font-size: 34px;
+    line-height: 44px;
+  }
+}
+
+/* ===============================
+MOBILE
+================================ */
+
+@media (max-width: 768px) {
+  .internalMedicinePattern {
+    display: none;
+  }
+
+  .internalMedicineHero {
+    padding: 1.5rem 1.6rem 3rem;
+    gap: 2.6rem;
+  }
+
+  .internalMedicineHeroTitle {
+    font-size: 34px;
+    line-height: 42px;
+  }
+
+  .internalMedicineSubtitle {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .internalMedicineTitle,
+  .careTitle,
+  .whyChooseTitle {
+    font-size: 26px;
+    line-height: 36px;
+  }
+
+  .internalMedicineDescription,
+  .careTeamDescription,
+  .whyChooseList li,
+  .internalMedicineLink,
+  .nextStepItem,
+  .internalMedicineBreadcrumbLink,
+  .internalMedicineBreadcrumbSeparator {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .internalMedicineQuickLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  /* Next Steps */
+
+  .nextStepsActions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .nextStepItem {
+    justify-content: center;
+  }
+
+  .careTeamContent {
+    grid-template-columns: 1fr;
+  }
+
+  .internalMedicineSection {
+    padding: 1rem 1.6rem;
+  }
+
+  .internalMedicineBreadcrumbSection {
+    padding-left: 1.6rem;
+  }
+
+  .whyChooseList {
+    margin-left: 18px;
+  }
+}
+
+/* ===============================
+SMALL PHONES
+================================ */
+
+@media (max-width: 480px) {
+  .internalMedicineHeroTitle {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .internalMedicineTitle,
+  .careTitle,
+  .whyChooseTitle {
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  .nextStepsTitle {
+    font-size: 26px;
+  }
+
+  .internalMedicinePattern {
+    display: none;
+  }
+}

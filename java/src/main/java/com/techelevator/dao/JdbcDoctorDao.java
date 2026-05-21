@@ -1,6 +1,6 @@
 package com.techelevator.dao;
 
-import com.techelevator.model.dto.DoctorsInfo;
+import com.techelevator.model.dto.Doctors;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class JdbcDoctorDao implements DoctorsDao{
+public class JdbcDoctorDao implements DoctorsDao {
 
     private final JdbcTemplate template;
 
@@ -18,62 +18,100 @@ public class JdbcDoctorDao implements DoctorsDao{
         this.template = new JdbcTemplate(dataSource);
     }
 
-    // All doctors
-    public List<DoctorsInfo> getAllDoctors() {
-        List<DoctorsInfo> doctors = new ArrayList<>();
-        String sql = "SELECT * FROM doctors;";
-        SqlRowSet results = template.queryForRowSet(sql);
+    // Get all doctors information
+    @Override
+    public List<Doctors> getAllDoctors() {
+        List<Doctors> doctors = new ArrayList<>();
 
+        String sql =
+                "SELECT d.doctor_id, d.name, d.credential, d.specialty, d.rating, d.reviews, d.availability, " +
+                        "d.image, d.phone_number, d.education, d.experience, d.location, d.accepting_new_patients, " +
+                        "a.street_address, a.city_state_zip " +
+                        "FROM doctors d " +
+                        "LEFT JOIN hospital_addresses a " +
+                        "ON d.location = a.hospital_name;";
+
+        SqlRowSet results = template.queryForRowSet(sql);
         while (results.next()) {
             doctors.add(mapRowToDoctor(results));
         }
+
         return doctors;
     }
 
-
     // Get one doctor by ID
-    public DoctorsInfo getDoctorById(int doctorId) {
-        String sql = "SELECT * FROM doctors WHERE doctor_id = ?;";
+    @Override
+    public Doctors getDoctorById(int doctorId) {
+
+        String sql =
+                "SELECT d.doctor_id, d.name, d.credential, d.specialty, d.rating, d.reviews, d.availability, " +
+                        "d.image, d.phone_number, d.education, d.experience, d.location, d.accepting_new_patients, " +
+                        "a.street_address, a.city_state_zip " +
+                        "FROM doctors d " +
+                        "LEFT JOIN hospital_addresses a " +
+                        "ON d.location = a.hospital_name " +
+                        "WHERE d.doctor_id = ?;";
+
         SqlRowSet results = template.queryForRowSet(sql, doctorId);
 
         if (results.next()) {
             return mapRowToDoctor(results);
         }
+
         return null;
     }
 
 
-//    Get everything related to the doctor including the reviews and everything
-public List<DoctorsInfo> getAllDoctorsInformation() {
-    List<DoctorsInfo> doctorsInformation = new ArrayList<>();
-    String sql = "SELECT doctor_id, name, specialty, rating, " +
-            "reviews, availability, image, education, experience, " +
-            "location, accepting_new_patients FROM doctors;";
+    // Get all hospital locations
+    @Override
+    public List<Doctors> getAllHospitalLocations() {
 
-    SqlRowSet result = template.queryForRowSet(sql);
-    while (result.next()) {
-        doctorsInformation.add(mapRowToDoctor(result));
+        List<Doctors> hospitals = new ArrayList<>();
+
+        String sql =
+                "SELECT hospital_name, street_address, city_state_zip " +
+                        "FROM hospital_addresses;";
+        SqlRowSet results = template.queryForRowSet(sql);
+
+        while (results.next()) {
+            Doctors hospital = new Doctors();
+            hospital.setLocation(results.getString("hospital_name"));
+            hospital.setStreetAddress(results.getString("street_address"));
+            hospital.setCityStateZip(results.getString("city_state_zip"));
+
+            hospitals.add(hospital);
+        }
+
+        return hospitals;
     }
-    return doctorsInformation;
-}
 
+    // Map DB row → Doctors DTO
+    private Doctors mapRowToDoctor(SqlRowSet rowSet) {
 
+        Doctors doctor = new Doctors();
 
-
-    // 🧩 Helper method to map a database row into a Doctors object
-    private DoctorsInfo mapRowToDoctor(SqlRowSet rowSet) {
-        DoctorsInfo doctor = new DoctorsInfo();
-        doctor.setDoctor_id(rowSet.getInt("doctor_id"));
+        doctor.setDoctorId(rowSet.getInt("doctor_id"));
         doctor.setName(rowSet.getString("name"));
+        doctor.setCredential(rowSet.getString("credential"));
         doctor.setSpecialty(rowSet.getString("specialty"));
         doctor.setRating(rowSet.getDouble("rating"));
         doctor.setReviews(rowSet.getInt("reviews"));
         doctor.setAvailability(rowSet.getString("availability"));
         doctor.setImageUrl(rowSet.getString("image"));
+        doctor.setPhoneNumber(rowSet.getString("phone_number"));
         doctor.setEducation(rowSet.getString("education"));
         doctor.setExperience(rowSet.getString("experience"));
+
+        // hospital info
         doctor.setLocation(rowSet.getString("location"));
-        doctor.setAccepting_new_patients(rowSet.getBoolean("accepting_new_patients"));
+        doctor.setStreetAddress(rowSet.getString("street_address"));
+        doctor.setCityStateZip(rowSet.getString("city_state_zip"));
+
+        doctor.setAcceptingNewPatients(rowSet.getBoolean("accepting_new_patients"));
+
         return doctor;
     }
+
+
+
 }

@@ -4,85 +4,66 @@
 
 .heroSection {
   width: 100%;
-  padding: 3.2rem 0 8rem;
-  background-image: url("../../assets/2.png");
-  background-size: contain;
-  background-position: center right;
-  background-repeat: no-repeat;
-  background-color: #ebf8ff;
-  margin-bottom: 3.8rem;
+  height: 65vh;
+  background: rgb(220, 239, 245);
 }
 
 /* =========================
-   CONTAINER
+   GRID
 ========================= */
 
-.container {
-  max-width: 120rem;
-  margin: 0 auto;
-  padding-left: 1.6rem;
-  padding-right: 3.2rem;
-  position: relative;
-  z-index: 1;
-}
-
-/* =========================
-   HERO GRID
-========================= */
-
-.hero {
+.heroGrid {
   display: grid;
-  grid-template-columns: 1.45fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
   align-items: start;
-  gap: 6.4rem;
+}
+
+.heroGrid > * {
+  min-width: 0;
+}
+
+.leftSide {
+  max-width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.content {
+  width: 100%;
+  max-width: 550px;
+  margin-right: 60px;
+  margin-left: 80px;
+  margin-top: 155px;
 }
 
 /* =========================
-   LEFT SIDE
+   TEXT
 ========================= */
-.heroContent {
-  display: flex;
-  flex-direction: column;
-  padding-top: 8rem;
-  background-color: #ebf8ff;
-  transform: translateX(-115px);
-  color: #0b1220;
-}
 
-.greenDot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #22c55e;
-  flex-shrink: 0;
-}
 .heroTitle {
   margin: 0 0 1.9rem;
   font-family: "ABC Arizona Serif", serif;
-  font-style: normal;
   font-weight: 400;
+
   font-size: 5.6rem;
   line-height: 7.3rem;
-  color: rgb(0, 60, 114);
 
+  color: rgb(0, 60, 114);
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-}
-.lineOne,
-.lineTwo {
-  display: block;
 }
 
 .heroTitleHighlight {
   color: #006770;
 }
 
-/* sub text */
 .heroSubText {
   margin: 1.6rem 0 0;
   font-size: 1.8rem;
   line-height: 3.2rem;
   color: #0f172a;
-  max-width: 62rem;
+
+  max-width: 750px;
 }
 
 /* =========================
@@ -90,7 +71,7 @@
 ========================= */
 
 .buttonRow {
-  margin-top: 3.5rem;
+  margin: 3.5rem 0 5rem 0;
   display: flex;
   gap: 1.6rem;
   flex-wrap: wrap;
@@ -102,90 +83,133 @@
   align-items: center;
   justify-content: center;
   gap: 1.04rem;
-
   padding: 1.6rem 2.6rem;
   border-radius: 1.4rem;
   border: none;
   cursor: pointer;
-
   font-weight: 800;
   font-size: 1.6rem;
   color: #ffffff;
   background-color: #1388ae;
+  text-decoration: none;
 }
 
 .secondaryBtn {
-  padding: 1.6rem 2.6rem;
+  padding: 1.6rem 5.6rem;
   border-radius: 1.4rem;
   cursor: pointer;
-
-  font-weight: 800;
+  font-weight: 700;
   font-size: 1.6rem;
-
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(148, 163, 184, 0.55);
-  color: #0031a4;
-
+  background-color: #b2eaef;
+  border: 1px solid rgb(178 178 178 / 55%);
+  color: #2a2a60;
   box-shadow: 0 14px 40px rgba(15, 23, 42, 0.06);
   text-decoration: none;
 }
 
-.btnIcon {
-  width: 18px;
-  height: 18px;
+/* =========================
+   RIGHT SIDE (IMAGE EDGE)
+========================= */
+
+.rightSide {
+  width: 100%;
+  height: 80%;
+}
+
+.rightSide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* =========================
-   RESPONSIVE
+   RESPONSIVE FIXES
 ========================= */
 
-/* Tablets & small laptops (≤ 944px)
-   Examples: iPad landscape, small MacBooks, Surface tablets */
-@media (max-width: 944px) {
-  .hero {
-    grid-template-columns: 1fr;
-    gap: 4.8rem;
-    text-align: center;
+@media (max-width: 1400px) {
+  .content {
+    margin-left: 50px;
+    margin-top: 120px;
   }
 
-  .heroContent {
-    transform: none;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .buttonRow {
-    justify-content: center;
+  .heroTitle {
+    font-size: 4.5rem;
+    line-height: 5.5rem;
   }
 }
 
-/* Large phones & small tablets (≤ 704px)
-   Examples: iPad Mini, large Android phones, iPhone Plus/Max */
-@media (max-width: 704px) {
+/* Tablet */
+@media (max-width: 1024px) {
   .heroTitle {
-    font-size: 3.4rem;
+    line-height: 4rem;
+    font-size: 4rem;
+    white-space: nowrap;
+  }
+
+  .heroGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .rightSide {
+    height: 400px;
+  }
+
+  .content {
+    margin-left: 40px;
+    margin-top: 40px;
+  }
+}
+
+/* Mobile */
+/* @media (max-width: 600px) {
+  .content {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .heroTitle {
+    font-size: 2.8rem;
+    line-height: 4rem;
+    white-space: nowrap;
   }
 
   .heroSubText {
-    font-size: 1.6rem;
-    line-height: 2.8rem;
+    font-size: 1.5rem;
+    line-height: 2.4rem;
   }
 
-  .heroContent {
-    padding: 2.8rem;
-  }
-}
+  .buttonRow {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 2.6rem;
+  } */
 
-/* Mobile phones (≤ 544px)
-   Examples: iPhone 12/13/14/15, small Android devices */
-@media (max-width: 544px) {
+@media (max-width: 600px) {
+  .content {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
   .heroTitle {
-    font-size: 3rem;
+    font-size: 2.8rem;
+    line-height: 4rem;
+    white-space: nowrap;
+  }
+
+  .heroSubText {
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+  }
+
+  .buttonRow {
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: 2.6rem;
   }
 
   .primaryBtn,
   .secondaryBtn {
-    width: 100%;
-    max-width: 36rem;
+    padding: 1.2rem 1.6rem;
+    font-size: 1.4rem;
   }
 }

@@ -1,0 +1,158 @@
+/* =========================
+   Hero Section
+========================= */
+
+.heroContainer {
+  position: relative;
+  background-color: rgb(220, 239, 245);
+  overflow: hidden;
+}
+
+.heroPattern {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -90px;
+  width: calc(38vw + 25px);
+  max-width: 420px;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 0 C20 20 20 20 0 30 C20 40 20 40 30 60 C40 40 40 40 60 30 C40 20 40 20 30 0Z' fill='none' stroke='%23003c72' stroke-width='1'/%3E%3C/svg%3E");
+
+  background-repeat: repeat;
+  background-size: 60px 60px;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+
+  max-width: 118rem;
+  margin: 0 auto;
+
+  padding: 6rem 1.25rem 5rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.heroTitle {
+  font-family: "ABC Arizona Serif", serif;
+  font-size: 40px;
+  color: rgb(0, 60, 114);
+}
+
+.heroSubtitle {
+  margin-top: 8px;
+  font-size: 18px;
+  color: #5f6f89;
+}
+
+/* =========================
+   Page Section
+========================= */
+
+.section {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 24px;
+}
+
+/* =========================
+   Confirmation Card
+========================= */
+
+.card {
+  background: white;
+
+  padding: 48px 40px;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.icon {
+  color: #1f8a6a;
+  margin-bottom: 18px;
+}
+
+.title {
+  font-size: 28px;
+  color: #243a5e;
+}
+
+.description {
+  margin-top: 14px;
+  font-size: 18px;
+  color: #5f6f89;
+}
+
+.notice {
+  margin-top: 22px;
+
+  padding: 16px;
+
+  background: #f4f7fb;
+
+  border-radius: 10px;
+
+  font-size: 16px;
+}
+
+.button {
+  display: inline-block;
+
+  margin-top: 30px;
+
+  padding: 14px 28px;
+
+  border-radius: 40px;
+
+  background: #236f81;
+  color: white;
+
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #1c5c6a;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 1024px) {
+  .heroPattern {
+    display: none;
+  }
+}
+
+@media (max-width: 675px) {
+  .heroContent {
+    grid-template-columns: 1fr;
+  }
+
+  .heroTitle {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroContent {
+    padding: 4rem 1.6rem 3rem;
+  }
+
+  .heroTitle {
+    font-size: 32px;
+  }
+
+  .card {
+    padding: 32px 22px;
+  }
+}

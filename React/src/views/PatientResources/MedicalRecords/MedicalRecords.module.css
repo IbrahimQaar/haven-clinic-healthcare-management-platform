@@ -1,0 +1,248 @@
+/* HERO CONTAINER */
+.mainContainer {
+  position: relative;
+  background-color: #dceff5;
+  overflow: hidden;
+}
+
+.heroBackgroundPattern {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -90px;
+  width: calc(38vw + 25px);
+  /* max-width: 960px; */
+  max-width: 420px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 0 C20 20 20 20 0 30 C20 40 20 40 30 60 C40 40 40 40 60 30 C40 20 40 20 30 0Z' fill='none' stroke='%23003c72' stroke-width='1'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 60px 60px;
+  background-position: right top;
+}
+
+/* HERO CONTENT */
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 118rem;
+  margin: 0 auto;
+  padding: 9.5rem 1.25rem 7.5rem;
+}
+
+.heroText {
+  min-width: 0;
+}
+
+.heroTitle {
+  font-family: "ABC Arizona Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 56px;
+  line-height: 73px;
+  color: rgb(0, 60, 114);
+  white-space: nowrap;
+}
+
+.heroSubtitle {
+  color: rgb(0, 60, 114);
+  font-family: "Public Sans", "Open Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 43px;
+  margin-top: 1.4rem;
+}
+
+/* BREADCRUMBS */
+.breadcrumbSection {
+  padding: 0 0 0 2rem;
+}
+
+.breadcrumbNav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 120rem;
+  margin: 22px auto;
+}
+
+.breadcrumbLink,
+.breadcrumbSeparator {
+  font-family: "Public Sans", "Open Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 32px;
+  color: rgb(0, 60, 114);
+}
+
+.breadcrumbLink {
+  text-decoration: none;
+}
+
+.breadcrumbLink:hover {
+  text-decoration: underline;
+}
+
+.recordsAccessSection {
+  max-width: 120rem;
+  margin: 16px auto;
+  padding: 2rem 2.4rem 2.4rem;
+}
+
+/* Headings */
+.sectionHeading {
+  font-family: "ABC Arizona Serif", serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 52px;
+  color: rgb(0, 60, 114);
+  margin: 2.4rem 0 1.2rem;
+}
+
+/* Body text */
+.sectionText {
+  font-family: "Public Sans", "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  color: rgb(40, 40, 40);
+  margin-top: 1.2rem;
+}
+
+/* Button */
+.accessBtn {
+  margin-top: 1.6rem;
+  background-color: #0062aa;
+  color: rgb(255, 255, 255);
+  padding: 14px 24px;
+  border: none;
+  border-radius: 24px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+
+  text-decoration: none;
+
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+}
+
+.accessBtn:hover {
+  background-color: #055187;
+}
+
+/* Secondary section */
+.additionalAccessInfo {
+  max-width: 120rem;
+  margin: 16px auto;
+  padding: 1.6rem 2.4rem 2.4rem;
+}
+
+/* ================================
+   TABLETS & SMALL DESKTOPS 
+   ================================ */
+@media (max-width: 1024px) {
+  .heroBackgroundPattern {
+    display: none;
+  }
+
+  .heroContent {
+    padding: 7.5rem 2.4rem 5.6rem;
+  }
+
+  .heroTitle {
+    font-size: 48px;
+    line-height: 62px;
+    white-space: normal;
+  }
+
+  .heroSubtitle {
+    font-size: 20px;
+    line-height: 36px;
+  }
+}
+
+/* ================================
+   TABLETS (≤768px)
+   ================================ */
+@media (max-width: 768px) {
+  .heroContent {
+    padding: 6rem 1.6rem 4.8rem;
+  }
+
+  .heroTitle {
+    font-size: 40px;
+    line-height: 52px;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  .heroSubtitle {
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  .breadcrumbSection {
+    padding-left: 1.6rem;
+  }
+
+  .breadcrumbNav {
+    padding: 0 1.6rem;
+  }
+
+  .recordsAccessSection,
+  .additionalAccessInfo {
+    padding: 2rem 1.6rem 2.4rem;
+  }
+
+  .sectionHeading {
+    font-size: 28px;
+    line-height: 36px;
+    margin: 2rem 0 1rem;
+  }
+
+  .sectionText {
+    font-size: 16px;
+    line-height: 29px;
+  }
+
+  .accessBtn {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+}
+
+/* ================================
+   PHONES (≤480px)
+   ================================ */
+@media (max-width: 480px) {
+  .heroContent {
+    padding: 5.2rem 1.6rem 4rem;
+  }
+
+  .heroTitle {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  .heroSubtitle {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .sectionHeading {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .sectionText {
+    font-size: 15.5px;
+    line-height: 27px;
+  }
+
+  .accessBtn {
+    width: 100%;
+    text-align: center;
+  }
+}

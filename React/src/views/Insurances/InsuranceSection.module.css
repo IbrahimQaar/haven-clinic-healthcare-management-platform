@@ -3,18 +3,12 @@
 ========================= */
 
 .section {
-  padding: 6rem 0;
-  background-color: #d7e5fe4d;
-  position: relative;
-  overflow: hidden;
+  max-width: 120rem;
+  margin: 22px auto;
+  padding: 0 2.4rem 0;
 }
 
 .container {
-  max-width: 120rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-  position: relative;
-  z-index: 10;
 }
 
 /* =========================
@@ -22,12 +16,10 @@
 ========================= */
 
 .header {
-  text-align: left;
-  max-width: 90rem;
-  margin: 0 auto 4rem;
 }
 
 .title {
+  font-family: "ABC Arizona Serif", serif;
   font-size: 4rem;
   line-height: 5.2rem;
   font-weight: 400;
@@ -49,27 +41,19 @@
   margin: 0 0 1.6rem;
 }
 
-.subtitleStrong {
-  font-weight: 600;
-}
-
 /* =========================
    INSURANCE LIST CARD
 ========================= */
 
 .InsuranceContainers {
-  margin: 4.2rem auto 0;
-  max-width: 110rem;
+  max-width: 120rem;
+  margin: 22px auto;
+  padding: 0 2.4rem 0;
 }
-
-.card {
-  padding: 4.2rem 5rem;
-}
-
 .columns {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 4.2rem;
   padding: 2.6rem 0;
   border-top: 1px solid rgba(148, 163, 184, 0.35);
@@ -119,76 +103,85 @@
   font-size: 1.5rem;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* ===============================
+TABLET
+================================ */
 
-/* =========================
-   Tablets + small laptops (≈ 1024px and below)
-========================= */
-@media (max-width: 64em) {
-  .title {
-    font-size: 2.8rem;
-    line-height: 3.6rem;
+@media (max-width: 1024px) {
+  .section {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
-  .subtitle {
-    font-size: 1.6rem;
-    line-height: 2.9rem;
+  .InsuranceContainers {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
-  .card {
-    padding: 3.2rem 3rem;
-    border-radius: 2.2rem;
+  .columns {
+    grid-template-columns: 1fr;
+    gap: 4rem;
   }
 
   .list {
-    font-size: 1.6rem;
-    line-height: 2.9rem;
+    width: 100%;
   }
 
-  .columns {
-    gap: 3rem;
+  .title {
+    font-size: 44px;
+    line-height: 58px;
   }
 }
 
-/* =========================
-   Tablets (portrait) + large phones (≈ 704px and below)
-========================= */
-@media (max-width: 44em) {
+/* ===============================
+MOBILE
+================================ */
+
+@media (max-width: 768px) {
+  .section {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .InsuranceContainers {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .title {
+    font-size: 34px;
+    line-height: 42px;
+  }
+
+  .subtitle,
+  .list {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
   .columns {
     grid-template-columns: 1fr;
-    padding: 2rem 0;
-  }
-
-  .columns::after {
-    display: none;
+    gap: 2.6rem;
   }
 }
 
-/* =========================
-   Mobile phones (≈ 544px and below)
-========================= */
-@media (max-width: 34em) {
+/* ===============================
+SMALL PHONES
+================================ */
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
   .section {
-    padding: 5rem 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
-  .container {
-    padding: 0 1.5rem;
-  }
-
-  .card {
-    padding: 2.6rem 2.2rem;
-  }
-
-  .list li {
-    padding-left: 3.8rem;
-  }
-
-  .list li::before {
-    width: 2.4rem;
-    height: 2.4rem;
-    font-size: 1.4rem;
+  .InsuranceContainers {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }

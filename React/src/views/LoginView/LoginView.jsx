@@ -46,7 +46,7 @@ export default function LoginView() {
 
   return (
     <div className={styles.viewLogin}>
-      <h2>Login</h2>
+      <h2>Sign In</h2>
 
       <Notification
         notification={notification}
@@ -55,7 +55,7 @@ export default function LoginView() {
 
       <form onSubmit={handleSubmit}>
         <div className={styles.formControl}>
-          <label htmlFor="username">Username:</label>
+          <label htmlFor="email-address">Email Address:</label>
           <input
             type="text"
             id="username"
@@ -84,7 +84,7 @@ export default function LoginView() {
           type="submit"
           className={`${styles.btnPrimary} ${styles.formButton}`}
         >
-          Sign in
+          Sign In
         </button>
 
         <Link className={styles.registerLink} to="/register">

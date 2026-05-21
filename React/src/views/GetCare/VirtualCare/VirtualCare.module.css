@@ -1,0 +1,429 @@
+.virtualCareContainer {
+  background: #eaf5fb;
+  position: relative;
+  overflow: hidden;
+}
+.virtualCarePattern {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -90px;
+  width: calc(38vw + 25px);
+  max-width: 420px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 0 C20 20 20 20 0 30 C20 40 20 40 30 60 C40 40 40 40 60 30 C40 20 40 20 30 0Z' fill='none' stroke='%23003c72' stroke-width='1'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 60px 60px;
+  background-position: right top;
+  z-index: 0;
+}
+
+.virtualCareHero {
+  position: relative;
+  z-index: 2;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 1.75rem 2rem 4.5rem;
+  display: grid;
+  grid-template-columns: 1.05fr 1.25fr;
+  align-items: center;
+  gap: 24.4rem;
+}
+
+.virtualCareHeroTitle {
+  font-family: "ABC Arizona Serif", serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(0, 60, 114);
+  font-size: 38px;
+  line-height: 73px;
+  white-space: nowrap;
+}
+
+.virtualCareSubtitle {
+  font-family: "Public Sans", "Open Sans", sans-serif;
+  font-weight: 500;
+  color: rgb(0, 60, 114);
+  font-size: 18px;
+  line-height: 43px;
+}
+
+/* Quick Links */
+
+.virtualCareQuickLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.8rem;
+  border-top: 1.8px solid #b8c2d0;
+  border-bottom: 1.8px solid #b8c2d0;
+  padding: 1.5rem 0;
+}
+
+.virtualCareLink {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  text-decoration: none;
+  font-family: "Public Sans", "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: rgb(0, 60, 114);
+}
+
+.virtualCareIcon {
+  font-size: 2rem;
+  color: #2f7fd3;
+}
+
+.virtualCareArrow {
+  font-size: 2rem;
+  color: #2f7fd3;
+}
+
+/* Breadcrumb */
+
+.virtualCareBreadcrumb {
+  padding-left: 2rem;
+}
+
+.virtualCareBreadcrumbNav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 120rem;
+  margin: 22px auto;
+}
+
+.virtualCareBreadcrumbLink,
+.virtualCareBreadcrumbSeparator {
+  font-family: "Public Sans", "Open Sans", sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+  color: rgb(0, 60, 114);
+  text-decoration: none;
+}
+.virtualCareBreadcrumbLink:hover {
+  text-decoration-line: underline;
+  text-decoration-color: #25a3b5;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.virtualCareImageWrapper {
+  position: relative;
+  border-radius: 16px;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 600 / 340;
+  overflow: hidden;
+}
+
+.virtualCareImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+  color: transparent;
+  object-fit: cover;
+}
+
+.virtualCareSection {
+  max-width: 120rem;
+  margin: 22px auto;
+  padding: 1rem 2.4rem 0;
+}
+
+.virtualCareTitle {
+  font-family: "ABC Arizona Serif", serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 52px;
+  color: rgb(0, 60, 114);
+  margin: 3.4rem 0;
+}
+
+.virtualCareText {
+  font-family: "Public Sans", "Open Sans", sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+  color: rgb(40, 40, 40);
+  /* width: 850px; */
+  width: 100%;
+  margin: 0 0 16px 0;
+  max-width: 1100px;
+}
+
+.virtualCareList {
+  font-family: "Public Sans", "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(40, 40, 40);
+  font-size: 18px;
+  line-height: 32px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+
+  padding-left: 2rem; /* pushes content away from left edge */
+  padding-right: 2rem;
+}
+
+.virtualCareList li::marker {
+  color: #2f91e2;
+  font-size: 1.4em;
+}
+
+.startVisitBtn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 26px;
+  background: #1f4c7a;
+  color: white;
+  text-decoration: none;
+  border-radius: 35px;
+  font-size: 18px;
+}
+
+.startVisitBtn:hover {
+  background-color: #2866a1;
+}
+
+/* Next Steps  */
+.nextStepsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #25a3b5;
+  padding: 69px 0;
+  margin-top: 8.4rem;
+}
+
+.nextStepsTitle {
+  font-family: "ABC Arizona Serif", serif;
+  font-size: 36px;
+  color: #effeff;
+  margin-bottom: 41px;
+}
+
+.nextStepsActions {
+  display: flex;
+  gap: 20px;
+}
+
+.nextStepItem {
+  display: flex;
+  gap: 14px;
+  font-family: "Public Sans", "Open Sans", sans-serif;
+  font-size: 18px;
+  padding: 12px 26px;
+  background: #f9f9f9;
+  border-radius: 14px;
+  text-decoration: none;
+}
+
+.nextStepItem:hover {
+  background-color: #d6f5f7;
+}
+
+.nextStepsIcon {
+  font-size: 2rem;
+  color: #2f7fd3;
+}
+
+/* Keep all main content away from screen edges */
+
+.virtualCareHero,
+.virtualCareSection,
+.virtualCareBreadcrumbNav,
+.virtualCareQuickLinks {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.virtualCareBenefits {
+}
+
+.benefitTitle {
+  font-family: "ABC Arizona Serif", serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(0, 60, 114);
+  font-size: 24px;
+  line-height: 31px;
+}
+
+.virtualCareBenefits li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.benefitsIcon {
+  background-color: #bfdcf8;
+  border-radius: 14px;
+  max-width: 70%;
+  color: #2f91e2;
+  font-size: 5.9rem;
+  margin-right: 10px;
+  vertical-align: middle;
+
+  background-color: #e6f4fd;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.benefitsText {
+  font-family: "Public Sans", "Open Sans", sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+  color: rgb(40, 40, 40);
+  /* width: 850px; */
+  width: 100%;
+  margin: 0 0 16px 0;
+  max-width: 700px;
+}
+
+/* ===============================
+TABLET
+================================ */
+
+@media (max-width: 1024px) {
+  .virtualCarePattern {
+    display: none;
+  }
+
+  .virtualCareHero {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
+
+  /* Image first and controlled size */
+
+  .virtualCareImageWrapper {
+    order: -1;
+    position: relative;
+    border-radius: 16px;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 600 / 340;
+  }
+
+  .virtualCareImage {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    inset: 0px;
+    aspect-ratio: 16 / 9;
+  }
+
+  .virtualCareText {
+    width: 100%;
+  }
+
+  .virtualCareHeroTitle {
+    font-size: 44px;
+    line-height: 58px;
+    white-space: normal;
+  }
+
+  .virtualCareTitle {
+    font-size: 34px;
+    line-height: 44px;
+  }
+
+  .virtualCareSection {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
+}
+
+/* ===============================
+MOBILE
+================================ */
+
+@media (max-width: 768px) {
+  .virtualCareHero {
+    padding: 1.5rem 2.4rem 3rem;
+    gap: 2.6rem;
+  }
+
+  .virtualCareHeroTitle {
+    font-size: 34px;
+    line-height: 42px;
+  }
+
+  .virtualCareSubtitle {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .virtualCareTitle {
+    font-size: 26px;
+    line-height: 36px;
+  }
+
+  .virtualCareText,
+  .virtualCareList li,
+  .virtualCareLink,
+  .virtualCareBreadcrumbLink,
+  .virtualCareBreadcrumbSeparator {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .virtualCareQuickLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
+
+  /* Keep TWO columns */
+
+  .virtualCareList {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .nextStepsActions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+}
+
+/* ===============================
+SMALL PHONES
+================================ */
+
+@media (max-width: 480px) {
+  .virtualCareHeroTitle {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .virtualCareTitle {
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  .virtualCarePattern {
+    display: none;
+  }
+
+  .virtualCareSection {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
+}

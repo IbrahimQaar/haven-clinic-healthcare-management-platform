@@ -1,110 +1,168 @@
-.locationSection {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  max-width: 120rem;
-  margin: 10.4rem auto 11rem;
-  gap: 4.4rem;
-}
+/* HERO CONTAINER */
 
-.locationContent {
-  border: 1px solid #0b4a8b;
-  border-radius: 2rem;
+.mainContainer {
+  position: relative;
+  background-color: rgb(220, 239, 245);
   overflow: hidden;
-  background: #ffffff;
-
-  display: flex;
-  flex-direction: column;
-  font-family: "Public Sans", "Open Sans", sans-serif;
-  height: 100%;
 }
 
-.titleContainer {
-  background: #eef8ff;
-  padding: 2.4rem 2.8rem;
-  display: flex;
+.heroPattern {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -90px;
+  width: calc(38vw + 25px);
+  max-width: 420px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 0 C20 20 20 20 0 30 C20 40 20 40 30 60 C40 40 40 40 60 30 C40 20 40 20 30 0Z' fill='none' stroke='%23003c72' stroke-width='1'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 60px 60px;
+  background-position: right top;
+}
+
+/* HERO CONTENT */
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 118rem;
+  margin: 0 auto;
+  padding: 6.5rem 2.4rem 4.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  justify-content: flex-start;
-  min-height: 16rem;
+  gap: 4rem;
 }
 
-.locationName {
+.heroTitle {
   font-family: "ABC Arizona Serif", serif;
   font-weight: 400;
-  font-size: 2.8rem;
-  line-height: 3.6rem;
-  color: #003c72;
-  margin: 0;
-
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.5rem;
+  font-style: normal;
+  font-size: 56px;
+  line-height: 73px;
+  color: rgb(0, 60, 114);
+  white-space: nowrap;
 }
 
-.otherDetails {
-  padding: 3.2rem 2.8rem 5.6rem;
+/* =========================
+   BREADCRUMBS
+   ========================= */
+
+.breadcrumbSection {
+  padding-left: 2rem;
+}
+
+.breadcrumbNav {
   display: flex;
-  flex-direction: column;
-  gap: 4.8rem;
+  align-items: center;
+  gap: 1rem;
+  max-width: 120rem;
+  margin: 22px auto;
 }
+
+.breadcrumbLink,
+.breadcrumbSeparator {
+  font-family: "Public Sans", "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+  color: rgb(0, 60, 114);
+}
+
+.breadcrumbLink {
+  text-decoration: none;
+}
+
+.breadcrumbLink:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   LOCATION GRID
+   ========================= */
+
+.locationSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  padding: 60px 2.4rem;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+/* Card */
+
+.locationCard {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+/* Image */
+
+.locationImage {
+  width: 100%;
+  background: #f5f7fa;
+  object-fit: cover;
+  margin-bottom: 14px;
+}
+
+/* Location Name */
+
+.locationName {
+  font-size: 18px;
+  font-weight: 600;
+  padding-left: 12px;
+}
+
+/* Address row */
 
 .detailRow {
-  display: grid;
-  grid-template-columns: 3.2rem 1fr;
-  align-items: start;
-  column-gap: 2.4rem;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
 }
 
 .detailIcon {
-  width: 2.6rem;
-  height: 2.6rem;
-  color: #2f7dd6;
-  margin-top: 0.2rem;
+  width: 18px;
+  color: #003c72;
 }
 
 .addressBlock {
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
 }
 
 .locationAddress {
-  font-size: 1.8rem;
-  line-height: 3.2rem;
-  color: rgb(40, 40, 40);
+  font-size: 14px;
+  color: #555;
+  font-weight: 500;
+  padding: 8px 0 21px 14px;
 }
 
-.getDirections {
-  display: inline-block;
-  margin-top: 1.2rem;
-  font-size: 1.8rem;
-  color: #003c72;
-  font-weight: 600;
-
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.4rem;
-
-  white-space: nowrap;
-}
-
-.getDirections:hover {
-  color: #0059b3;
-}
-
-.phoneNumber {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: #003c72;
-  margin: 0;
-
-  text-decoration: underline;
-  text-decoration-thickness: 0.5px;
-  text-underline-offset: 0.4rem;
-}
+/* ===============================
+TABLET
+================================ */
 
 @media (max-width: 1024px) {
+  .heroPattern {
+    display: none;
+  }
+
+  .heroContent {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .heroTitle {
+    font-size: 44px;
+    line-height: 58px;
+  }
+
   .locationSection {
     grid-template-columns: repeat(2, 1fr);
+    padding: 60px 2.4rem;
   }
 
   .locationName {
@@ -112,21 +170,61 @@
     line-height: 2.6rem;
   }
 
-  .locationAddress,
-  .getDirections,
-  .phoneNumber {
+  .locationAddress {
     font-size: 1.6rem;
     line-height: 2.5rem;
   }
 }
 
-@media (max-width: 640px) {
-  .locationSection {
-    grid-template-columns: 1fr;
-    padding: 0 2rem;
+/* ===============================
+MOBILE
+================================ */
+
+@media (max-width: 768px) {
+  .heroPattern {
+    display: none;
   }
 
-  .titleContainer {
-    min-height: 14rem;
+  .heroContent {
+    padding: 1.5rem 1.6rem 3rem;
+    gap: 2.6rem;
+  }
+
+  .heroTitle {
+    font-size: 34px;
+    line-height: 42px;
+    white-space: normal;
+  }
+
+  .breadcrumbLink,
+  .breadcrumbSeparator,
+  .locationName,
+  .locationAddress {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .locationSection {
+    grid-template-columns: 1fr;
+    padding: 40px 1.6rem;
+  }
+
+  .breadcrumbSection {
+    padding-left: 1.6rem;
+  }
+}
+
+/* ===============================
+SMALL PHONES
+================================ */
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .heroPattern {
+    display: none;
   }
 }

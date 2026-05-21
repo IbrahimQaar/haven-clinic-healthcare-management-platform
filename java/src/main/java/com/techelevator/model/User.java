@@ -9,18 +9,21 @@ import java.util.Set;
 public class User {
 
    private int id;
-   private String username;
+   private String email;
+
    @JsonIgnore
    private String password;
+
    @JsonIgnore
    private boolean activated;
+
    private Set<Authority> authorities = new HashSet<>();
 
    public User() { }
 
-   public User(int id, String username, String password, String authorities) {
+   public User(int id, String email, String password, String authorities) {
       this.id = id;
-      this.username = username;
+      this.email = email;
       this.password = password;
       if (authorities != null) this.setAuthorities(authorities);
       this.activated = true;
@@ -35,11 +38,11 @@ public class User {
    }
 
    public String getUsername() {
-      return username;
+      return email;
    }
 
-   public void setUsername(String username) {
-      this.username = username;
+   public void setUsername(String email) {
+      this.email = email;
    }
 
    public String getPassword() {
@@ -81,21 +84,21 @@ public class User {
       User user = (User) o;
       return id == user.id &&
               activated == user.activated &&
-              Objects.equals(username, user.username) &&
+              Objects.equals(email, user.email) &&
               Objects.equals(password, user.password) &&
               Objects.equals(authorities, user.authorities);
    }
 
    @Override
    public int hashCode() {
-      return Objects.hash(id, username, password, activated, authorities);
+      return Objects.hash(id, email, password, activated, authorities);
    }
 
    @Override
    public String toString() {
       return "User{" +
               "id=" + id +
-              ", username='" + username + '\'' +
+              ", email='" + email + '\'' +
               ", activated=" + activated +
               ", authorities=" + authorities +
               '}';
